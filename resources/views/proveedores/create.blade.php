@@ -2,7 +2,7 @@
 
 
 @section('hijos')
-<h1>Crear nueva persona</h1>
+<h1>Crear nuevo proveedor</h1>
 
 
 <div class="row">
