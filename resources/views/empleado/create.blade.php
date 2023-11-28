@@ -2,16 +2,16 @@
 
 
 @section('hijos')
-<h1>Crear nuevo departamento</h1>
+<h1>Crear nuevo empleado</h1>
 
 
 <div class="row">
 <div class="col">
 
-<form action="/departamento" class= "form-control" method="POST">
+<form action="/empleado" class= "form-control" method="POST">
 @csrf
 <div class="mb-3">
-  <label for="" class="form-label">Nombre departamento</label>
+  <label for="" class="form-label">Nombre del empleado</label>
   <input type="text" class="form-control" id="nombre"  name="nombre">
 </div>
 

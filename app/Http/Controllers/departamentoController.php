@@ -23,6 +23,7 @@ class departamentoController extends Controller
     public function create()
     {
         //
+        return view('departamento.create');
     }
 
     /**
@@ -31,6 +32,13 @@ class departamentoController extends Controller
     public function store(Request $request)
     {
         //
+        $depa=new departamento(); //Agente es la que dice el modelo 
+        $depa->nombre=$request->get('nombre');
+       
+      
+        $depa -> save();
+
+        return redirect('departamento');
     }
 
     /**

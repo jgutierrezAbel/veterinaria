@@ -22,7 +22,7 @@ class especialidadesController extends Controller
      */
     public function create()
     {
-        //
+        return view('especialidades.create');
     }
 
     /**
@@ -30,7 +30,11 @@ class especialidadesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $espe=new especialidades(); //Agente es la que dice el modelo 
+        $espe->tipo_especialidad=$request->get('tipo');
+        $espe->descripcion=$request->get('descripcion');
+        $espe-> save();
+        return redirect('especialidades');
     }
 
     /**
