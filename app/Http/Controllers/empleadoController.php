@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\empleado;
 use Illuminate\Http\Request;
 
 class empleadoController extends Controller
@@ -11,7 +11,8 @@ class empleadoController extends Controller
      */
     public function index()
     {
-        //
+        $datoemple=empleado::all();
+        return view('empleado.index')->with('espe',$datoemple);
     }
 
     /**
@@ -19,7 +20,7 @@ class empleadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('empleado.create');
     }
 
     /**
@@ -27,7 +28,11 @@ class empleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $emple=new empleado(); //Agente es la que dice el modelo 
+        $emple->tipo_especialidad=$request->get('tipo');
+        $emple->descripcion=$request->get('descripcion');
+        $emple-> save();
+        return redirect('especialidades');
     }
 
     /**

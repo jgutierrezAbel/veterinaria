@@ -4,9 +4,9 @@
 
 
 
-<a href="departamento/create"class="btn btn-success">Crear</a>
+<a href="empleado/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de departamento</h1>
+<h1>Lista de empleados</h1>
 
     <table class ="table">
         <thead>

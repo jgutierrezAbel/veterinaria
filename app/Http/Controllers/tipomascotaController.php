@@ -32,6 +32,11 @@ class tipomascotaController extends Controller
     public function store(Request $request)
     {
         //
+        $tipomasco=new tipo_mascota(); //Agente es la que dice el modelo 
+        $tipomasco->tipo_mascota=$request->get('tipo');
+        $tipomasco->descripcion=$request->get('descripcion');
+        $tipomasco-> save();
+        return redirect('tipomascota');
     }
 
     /**
