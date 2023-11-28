@@ -13,7 +13,7 @@
 <a href="/tipomascota"class="btn btn-warning">Tipos de mascotas </a>
 <a href="/departamento"class="btn btn-warning">Departamentos </a>
 <a href="/especialidades"class="btn btn-warning">Especialidades de los veterinarios </a>
-<a href="/empleados"class="btn btn-warning">Ver empleado</a>
+<a href="/empleado"class="btn btn-warning">Ver empleado</a>
 @endsection
 
 
