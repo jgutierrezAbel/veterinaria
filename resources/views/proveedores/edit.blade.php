@@ -1,5 +1,3 @@
-<h1>Hola Ramiro</h1>
-
 @extends('layouts.cuerpo')
 
 @section('hijos')

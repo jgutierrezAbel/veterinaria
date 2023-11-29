@@ -13,17 +13,23 @@
             <tr>
                 <th>id</th>
                 <th>nombre</th>
+                <th>apellido</th>
+                <th>fecha de naciemiento</th>
+                <th>género</th>
+                <th>id del departamento</th>
                 
             </tr>
 
         <tbody>
         
-        @foreach ($depa as $depas)
+        @foreach ($espe as $espes)
             <tr>
-                <th>{{$depas->id}}</th>
-                <th>{{$depas->nombre}}</th>
-                
-                
+                <th>{{$espes->id}}</th>
+                <th>{{$espes->nombre}}</th>
+                <th>{{$espes->apellido}}</th>
+                <th>{{$espes->fecha_nac}}</th>
+                <th>{{$espes->id_genero}}</th>
+                <th>{{$espes->id_departamento}}</th>
             </tr>
 
         @endforeach

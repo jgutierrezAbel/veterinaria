@@ -23,17 +23,17 @@ class empleadoController extends Controller
         return view('empleado.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        $emple=new empleado(); //Agente es la que dice el modelo 
-        $emple->tipo_especialidad=$request->get('tipo');
-        $emple->descripcion=$request->get('descripcion');
-        $emple-> save();
-        return redirect('especialidades');
-    }
+    $emple = new empleado();
+    $emple->nombre = $request->input('nombre');
+    $emple->apellido = $request->input('apellido');
+    $emple->fecha_nac = $request->input('fecha_nac');
+    $emple->id_genero = $request->input('id_genero');
+    $emple->id_departamento = $request->input('id_departamento');
+    $emple->save();
+    return redirect('/empleado');
+}
 
     /**
      * Display the specified resource.
