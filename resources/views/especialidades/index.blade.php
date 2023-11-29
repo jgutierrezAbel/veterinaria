@@ -23,6 +23,20 @@
                 <th>{{$espes->id}}</th>
                 <th>{{$espes->tipo_especialidad}}</th>
                 <th>{{$espes->descripcion}}</th>
+
+                <th>
+
+                
+                 <form action="/especialidades/{{{$espes->id}}}" method="post">
+                    @csrf
+                    @method('DELETE')
+
+                 <a href="/especialidades/{{$espes->id}}/edit"class="btn btn-primary">Editar</a>
+
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+
+                </form>
+                </th>
                 
                 
             </tr>

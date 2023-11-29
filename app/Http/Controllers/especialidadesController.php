@@ -51,6 +51,8 @@ class especialidadesController extends Controller
     public function edit(string $id)
     {
         //
+        $editar= especialidades::find($id);
+        return view('especialidades.edit')->with('editarcli',$editar);
     }
 
     /**
@@ -59,6 +61,12 @@ class especialidadesController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $especialidades=especialidades::find($id);
+        $especialidades->tipo_especialidad=$request->get('tipo');
+        $especialidades->descripcion=$request->get('descripcion');
+       
+        $especialidades -> save();
+       return redirect('especialidades');
     }
 
     /**
@@ -67,5 +75,9 @@ class especialidadesController extends Controller
     public function destroy(string $id)
     {
         //
+        $eliminado=especialidades::find($id);
+        $eliminado->delete();
+
+        return redirect('especialidades');
     }
 }

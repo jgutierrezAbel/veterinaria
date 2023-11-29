@@ -67,7 +67,7 @@ class proveedoreController extends Controller
         //
         $proveedor=proveedore::find($id);
         $proveedor->nombre=$request->get('nombre');
-        $proveedor->descripcion=$request->get('apellido');
+        $proveedor->descripcion=$request->get('descripcion');
        
        $proveedor -> save();
        return redirect('proveedores');
