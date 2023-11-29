@@ -23,6 +23,19 @@
                 <th>{{$proveedore->id}}</th>
                 <th>{{$proveedore->nombre}}</th>
                 <th>{{$proveedore->descripcion}}</th>
+                <th>
+
+                
+                 <form action="/proveedores/{{{$proveedore->id}}}" method="post">
+                    @csrf
+                    @method('DELETE')
+
+                 <a href="/proveedores/{{$proveedore->id}}/edit"class="btn btn-primary">Editar</a>
+
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+
+                </form>
+                </th>
                 
                 
             </tr>

@@ -55,6 +55,7 @@ class departamentoController extends Controller
     public function edit(string $id)
     {
         //
+        
     }
 
     /**
