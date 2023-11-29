@@ -42,20 +42,19 @@
 
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Guardar</button>
-                <a href="/portada" class="btn btn-danger">Cancelar</a>
+                <a href="/empleado" class="btn btn-danger">Cancelar</a>
             </div>
         </form>
 
     </div>
 </div>
 
-<!-- Asegúrate de incluir los scripts necesarios, como el de Bootstrap-datepicker si aún no lo has hecho -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
 <script>
-    // Inicializa el datepicker para el campo de fecha de nacimiento
+    
     $(document).ready(function(){
         $('.datepicker').datepicker({
             format: 'yyyy-mm-dd',

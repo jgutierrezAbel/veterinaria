@@ -12,7 +12,7 @@ class empleadoController extends Controller
     public function index()
     {
         $datoemple=empleado::all();
-        return view('empleado.index')->with('espe',$datoemple);
+        return view('empleado.index')->with('emple',$datoemple);
     }
 
     /**
@@ -48,7 +48,9 @@ class empleadoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $editar= empleado::find($id);
+        return view('empleado.edit')->with('editaremp',$editar);
+        return view('editar_empleado');
     }
 
     /**
@@ -56,7 +58,14 @@ class empleadoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $emple=empleado::find($id);
+        $emple->nombre = $request->input('nombre');
+        $emple->apellido = $request->input('apellido');
+        $emple->fecha_nac = $request->input('fecha_nac');
+        $emple->id_genero = $request->input('id_genero');
+        $emple->id_departamento = $request->input('id_departamento');
+        $emple->save();
+       return redirect('empleado');
     }
 
     /**
@@ -64,6 +73,11 @@ class empleadoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+            //
+            $eliminado=empleado::find($id);
+            $eliminado->delete();
+    
+            return redirect('empleado');
     }
 }

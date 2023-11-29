@@ -8,6 +8,8 @@
 <h2>-----------------------------</h2>
 
 <h2>Este es nuestro menu</h2>
+@csrf
+@method('DELETE')
 
 <a href="/proveedores"class="btn btn-success"> Proveedores </a>
 <a href="/tipomascota"class="btn btn-warning">Tipos de mascotas </a>

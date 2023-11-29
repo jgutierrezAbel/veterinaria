@@ -22,16 +22,26 @@
 
         <tbody>
         
-        @foreach ($espe as $espes)
+        @foreach ($emple as $emplea)
             <tr>
-                <th>{{$espes->id}}</th>
-                <th>{{$espes->nombre}}</th>
-                <th>{{$espes->apellido}}</th>
-                <th>{{$espes->fecha_nac}}</th>
-                <th>{{$espes->id_genero}}</th>
-                <th>{{$espes->id_departamento}}</th>
-            </tr>
+                <th>{{$emplea->id}}</th>
+                <th>{{$emplea->nombre}}</th>
+                <th>{{$emplea->apellido}}</th>
+                <th>{{$emplea->fecha_nac}}</th>
+                <th>{{$emplea->id_genero}}</th>
+                <th>{{$emplea->id_departamento}}</th>
+            
+            <th>
+            <form action="/empleado/{{{$emplea->id}}}" method="post">
+                    @csrf
+                    @method('DELETE')
 
+                 <a href="/empleado/{{$emplea->id}}/edit"class="btn btn-primary">Editar</a>
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 </form> 
+                </th>
+                </tr>
+                
         @endforeach
         
         </tbody>

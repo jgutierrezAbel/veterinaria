@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Plantilla padre</title>
+    <title>Veterinaria</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a href="/portada" class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -30,10 +30,13 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a href="/proveedores" class="dropdown-item" href="#">Proveedores</a></li>
+            <li><a href="/tipomascota" class="dropdown-item" href="#">Tipos de mascotas</a></li>
+            <li><a href="/departamento" class="dropdown-item" href="#">Departamentos</a></li>
+            <li><a href="/empleado" class="dropdown-item" href="#">Departamentos</a></li>
+            <li><a href="/especialidades" class="dropdown-item" href="#">Especialidades</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a href="/portada/create" class="dropdown-item" href="#">Acerca de nosotros</a></li>
           </ul>
         </li>
         <li class="nav-item">

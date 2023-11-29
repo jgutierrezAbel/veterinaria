@@ -22,7 +22,7 @@ class portadaController extends Controller
      */
     public function create()
     {
-        //
+        return view('portada.create');
     }
 
     /**
