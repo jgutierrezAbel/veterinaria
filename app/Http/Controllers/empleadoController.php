@@ -40,6 +40,8 @@ class empleadoController extends Controller
      */
     public function show(string $id)
     {
+        $empleadoEliminar=Empleado::find($id);
+        return view('empleado.delete')->with('empleadoEliminar',$empleadoEliminar);
         //
     }
 

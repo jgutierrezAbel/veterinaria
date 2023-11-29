@@ -2,35 +2,35 @@
 
 @section('hijos')
 
-<h1>Editar proveedor</h1>
+<h1>Eliminar proveedor</h1>
 
 <div class="row">
 <div class="col">
 
-<form action="/empleado/{{$editaremp->id}}" class= "form-control" method="POST">
+<form action="/empleado/{{$empleadoEliminar->id}}" class= "form-control" method="POST">
 @csrf
-@method('PUT')
+@method('DELETE')
 
 <div class="mb-3">
   <label for="" class="form-label">Nombre del empleado</label>
-  <input type="text" class="form-control" id="nombre" value="{{$editaremp->nombre}}" name="nombre">
+  <input type="text" class="form-control" id="nombre" value="{{$empleadoEliminar->nombre}}" name="nombre">
 </div>
 
 <div class="mb-3">
   <label for="" class="form-label">Apellido del empleado</label>
-  <input type="text" class="form-control" id="apellido" value="{{$editaremp->apellido}}" name="apellido">
+  <input type="text" class="form-control" id="apellido" value="{{$empleadoEliminar->apellido}}" name="apellido">
 </div>
 
 <div class="mb-3">
   <label for="" class="form-label">Fecha de nacimiento</label>
-  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editaremp->fecha_nac}}" name="fecha_nac">
+  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$empleadoEliminar->fecha_nac}}" name="fecha_nac">
 </div>
 
 <div class="mb-3">
                 <label for="id_genero" class="form-label">Género del empleado</label>
-               @if ($editaremp->id_genero=="masculino")
+               @if ($empleadoEliminar->id_genero=="masculino")
                <div>
-                    <input type="radio" id="masculino" checked value="{{$editaremp->id_genero}}" name="id_genero" value="masculino">
+                    <input type="radio" id="masculino" checked value="{{$empleadoEliminar->id_genero}}" name="id_genero" value="masculino">
                     <label for="masculino">Masculino</label>
                 </div>
                 <div>
@@ -39,7 +39,7 @@
                 </div>
                @else
                <div>
-                    <input type="radio" id="masculino" value="{{$editaremp->id_genero}}" name="id_genero" value="masculino">
+                    <input type="radio" id="masculino" value="{{$empleadoEliminar->id_genero}}" name="id_genero" value="masculino">
                     <label for="masculino">Masculino</label>
                 </div>
                 <div>
@@ -51,12 +51,12 @@
 
 <div class="mb-3">
   <label for="" class="form-label">Departamento</label>
-  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editaremp->id_departamento}}" name="id_departamento">
+  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$empleadoEliminar->id_departamento}}" name="id_departamento">
 </div>
 
 <div class="mb-3"> 
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <a href="/empleado" class="btn btn-danger">Cancelar</a>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="/empleado" class="btn btn-warning">Cancelar</a>
 
 </div>
 
