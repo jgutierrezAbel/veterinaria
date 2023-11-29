@@ -79,6 +79,9 @@ class proveedoreController extends Controller
     public function destroy(string $id)
     {
         //
-        
+        $eliminado=proveedore::find($id);
+        $eliminado->delete();
+
+        return redirect('proveedores');
     }
 }
