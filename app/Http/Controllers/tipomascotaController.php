@@ -45,6 +45,9 @@ class tipomascotaController extends Controller
     public function show(string $id)
     {
         //
+        $TipomascotaEliminar=tipo_mascota::find($id);
+        return view('tipomascota.delete')->with('TipomascotaEliminar',$TipomascotaEliminar);
+        //
     }
 
     /**

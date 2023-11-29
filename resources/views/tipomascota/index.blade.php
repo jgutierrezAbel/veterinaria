@@ -6,13 +6,13 @@
 
 <a href="tipomascota/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de tipos de especie</h1>
+<h1>Lista de tipos de Mascotas</h1>
 
     <table class ="table">
         <thead>
             <tr>
                 <th>id</th>
-                <th>Tipo especie</th>
+                <th>Tipo mascotas</th>
                 <th>descripcion</th>
             </tr>
 
@@ -34,7 +34,7 @@
 
                  <a href="/tipomascota/{{$tipe->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <button type="/tipomascota/{{$tipe->id}}" class = "btn btn-warning">Eliminar </button>
 
                 </form>
                 </th>
