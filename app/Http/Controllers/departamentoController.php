@@ -55,7 +55,9 @@ class departamentoController extends Controller
     public function edit(string $id)
     {
         //
-        
+        $editar= departamento::find($id);
+        return view('departamento.edit')->with('editarcli',$editar);
+       
     }
 
     /**
@@ -64,6 +66,13 @@ class departamentoController extends Controller
     public function update(Request $request, string $id)
     {
         //
+
+        $depa=departamento::find($id);
+        $depa->nombre=$request->get('nombre');
+        
+       
+        $depa -> save();
+       return redirect('departamento');
     }
 
     /**
@@ -72,5 +81,9 @@ class departamentoController extends Controller
     public function destroy(string $id)
     {
         //
+        $eliminado=departamento::find($id);
+        $eliminado->delete();
+
+        return redirect('departamento');
     }
 }

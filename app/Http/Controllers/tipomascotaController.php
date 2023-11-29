@@ -53,6 +53,8 @@ class tipomascotaController extends Controller
     public function edit(string $id)
     {
         //
+        $editar= tipo_mascota::find($id);
+        return view('tipomascota.edit')->with('editarcli',$editar);
     }
 
     /**
@@ -61,6 +63,12 @@ class tipomascotaController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $tipo=tipo_mascota::find($id);
+        $tipo->tipo_mascota=$request->get('tipo');
+        $tipo->descripcion=$request->get('descripcion');
+       
+        $tipo -> save();
+       return redirect('tipomascota');
     }
 
     /**
@@ -69,5 +77,9 @@ class tipomascotaController extends Controller
     public function destroy(string $id)
     {
         //
+        $eliminado=tipo_mascota::find($id);
+        $eliminado->delete();
+
+        return redirect('tipomascota');
     }
 }
