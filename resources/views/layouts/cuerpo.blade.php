@@ -29,7 +29,7 @@
             <li><a href="/proveedores" class="dropdown-item" href="#">Proveedores</a></li>
             <li><a href="/tipomascota" class="dropdown-item" href="#">Tipos de mascotas</a></li>
             <li><a href="/departamento" class="dropdown-item" href="#">Departamentos</a></li>
-            <li><a href="/empleado" class="dropdown-item" href="#">Departamentos</a></li>
+            <li><a href="/empleado" class="dropdown-item" href="#">Empleado</a></li>
             <li><a href="/especialidades" class="dropdown-item" href="#">Especialidades</a></li>
           </ul>
           <li class="nav-item">
