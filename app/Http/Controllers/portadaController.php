@@ -22,7 +22,7 @@ class portadaController extends Controller
      */
     public function create()
     {
-        return view('portada.create');
+
     }
 
     /**
@@ -38,7 +38,12 @@ class portadaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('portada.about');
+    }
+
+    public function about(string $id)
+    {
+        return view('portada.about');
     }
 
     /**

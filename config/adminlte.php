@@ -64,11 +64,12 @@ return [
     */
 
     'logo' => '<b>Veterinaria</b>JJR',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+'logo_img' => null,
+'logo_img_class' => 'fas fa-paw',
+'logo_img_xl' => null,
+'logo_img_xl_class' => 'fas fa-paw',
+'logo_img_alt' => '', 
+
 
     /*
     |--------------------------------------------------------------------------
@@ -320,10 +321,18 @@ return [
         ],
         ['header' => 'account_settings'],
         [
+            'text' => 'Acerca de nosotros',
+            'url'  => '/portada/about',
+            'icon' => 'fas fa-fw fa-info-circle',
+        ],
+
+        [
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
+
+
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
@@ -337,6 +346,27 @@ return [
                     'text' => 'Proveedores',
                     'url'  => '/proveedores',
                 ],
+
+                [
+                    'text' => 'Tipo de mascotas',
+                    'url'  => '/tipomascota',
+                ],
+
+                [
+                    'text' => 'Departamentos',
+                    'url'  => '/departamento',
+                ],
+
+                [
+                    'text' => 'Especialidades',
+                    'url'  => '/especialidades',
+                ],
+
+                [
+                    'text' => 'Empleados',
+                    'url'  => '/empleado',
+                ],
+
                 [
                     'text'    => 'level_one',
                     'url'     => '#',
@@ -361,10 +391,7 @@ return [
                         ],
                     ],
                 ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
+                
             ],
         ],
         ['header' => 'labels'],
