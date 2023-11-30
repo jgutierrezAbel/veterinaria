@@ -16,6 +16,7 @@
 <a href="/departamento"class="btn btn-warning">Departamentos </a>
 <a href="/especialidades"class="btn btn-warning">Especialidades de los veterinarios </a>
 <a href="/empleado"class="btn btn-warning">Ver empleado</a>
+<a href="/veterinario"class="btn btn-warning">Veterinarios</a>
 @endsection
 
 

@@ -2,7 +2,7 @@
 
 @section('hijos')
 
-<h1>Editar proveedor</h1>
+<h1>Editar empleado</h1>
 
 <div class="row">
   <div class="col">

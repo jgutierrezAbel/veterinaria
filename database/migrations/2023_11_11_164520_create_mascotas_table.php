@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('id_especialidad');
             $table->date('fecha_nac');
             $table->string('id_cli');
+            $table->string('id_generomas');
             $table->timestamps();
         });
     }

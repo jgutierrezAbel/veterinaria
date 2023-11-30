@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\veterinario;
 use Illuminate\Http\Request;
 
 class veterinarioController extends Controller
@@ -11,7 +11,8 @@ class veterinarioController extends Controller
      */
     public function index()
     {
-        //
+        $datovet=veterinario::all();
+        return view('veterinario.index')->with('vet',$datovet);
     }
 
     /**
@@ -19,7 +20,7 @@ class veterinarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('veterinario.create');
     }
 
     /**
@@ -27,7 +28,15 @@ class veterinarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vet=new veterinario();
+        $vet->nombre=$request->get('nombre');
+        $vet->apellido=$request->get('apellido');
+        $vet->fecha_nac=$request->get('fecha_nac');
+        $vet->id_especialidad=$request->get('id_especialidad');
+        $vet->id_nacionalidad=$request->get('id_nacionalidad');
+        $vet->id_genero=$request->get('id_genero');
+        $vet-> save();
+        return redirect('veterinario');
     }
 
     /**
@@ -35,7 +44,8 @@ class veterinarioController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $veteliminar=veterinario::find($id);
+        return view('veterinario.delete')->with('veteliminar',$veteliminar);
     }
 
     /**
@@ -43,7 +53,8 @@ class veterinarioController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $editar= veterinario::find($id);
+        return view('veterinario.edit')->with('editarvet',$editar);
     }
 
     /**
@@ -51,7 +62,15 @@ class veterinarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $vet=veterinario::find($id);
+        $vet->nombre=$request->get('nombre');
+        $vet->apellido=$request->get('apellido');
+        $vet->fecha_nac=$request->get('fecha_nac');
+        $vet->id_especialidad=$request->get('id_especialidad');
+        $vet->id_nacionalidad=$request->get('id_nacionalidad');
+        $vet->id_genero=$request->get('id_genero');
+        $vet-> save();
+        return redirect('veterinario');
     }
 
     /**
@@ -59,6 +78,8 @@ class veterinarioController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $eliminado = veterinario::find($id);
+        $eliminado->delete();
+        return redirect('veterinario');
     }
 }
