@@ -6,7 +6,7 @@
 
 <a href="proveedores/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista proveedores</h1>
+<h1>Veterinarios</h1>
 
     <table class ="table">
         <thead>

@@ -16,7 +16,6 @@
                 <th>apellido</th>
                 <th>fecha de naciemiento</th>
                 <th>género</th>
-                
                 <th>Departamento al que pertenece</th>
                 
             </tr>
@@ -30,7 +29,6 @@
                 <th>{{$emplea->apellido}}</th>
                 <th>{{$emplea->fecha_nac}}</th>
                 <th>{{$emplea->id_genero}}</th>
-                
                 <th>{{$emplea->departamento_nombre}}</th>
             
             <th>

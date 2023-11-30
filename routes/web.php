@@ -42,8 +42,12 @@ route::resource('/nacionalidad','App\Http\Controllers\nacionalidadController');
 route::resource('/tipomascota','App\Http\Controllers\tipomascotaController');
 route::resource('/portada','App\Http\Controllers\portadaController');
 route::resource('/empleado','App\Http\Controllers\empleadoController');
+<<<<<<< HEAD
 route::resource('/cliente','App\Http\Controllers\clienteController');
 
+=======
+route::resource('/mascota','App\Http\Controllers\mascotaController');
+>>>>>>> 982d58230624b77bcb7995c7b5f83da9406d9821
 
 
 

@@ -21,8 +21,6 @@ class empleadoController extends Controller
             ->join('departamentos', 'empleados.id_departamento', '=', 'departamentos.id')
             ->select('empleados.*', 'departamentos.nombre as departamento_nombre')
             ->get();
-        //print_r($datoemple);
-        //exit();
 
         return view('empleado.index')->with('emple', $datoemple);
     }
