@@ -7,7 +7,7 @@
 <div class="row">
 <div class="col">
 
-<form action="/tipomascota" class= "form-control" method="POST">
+<form action="/mascota" class= "form-control" method="POST">
 @csrf
 <div class="mb-3">
   <label for="" class="form-label">Nombre</label>
