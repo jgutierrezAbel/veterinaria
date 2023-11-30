@@ -4,38 +4,29 @@
 
 
 
-<a href="mascota/create"class="btn btn-success">Crear</a>
+<a href="nacionalidad/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de Mascotas</h1>
+<h1>Lista de Nacionalidades</h1>
 
     <table class ="table">
         <thead>
             <tr>
                 <th>id</th>
-                <th>nombre</th>
-                <th>id_especialidad</th>
-                <th>fecha de naciemiento</th>
-                <th>Id_Cliente</th>
-                
+                <th>Nacionalidad</th>               
             </tr>
 
         <tbody>
         
-        @foreach ($mascota as $mascotas)
+        @foreach ($nacionalidad as $nacionalidades)
             <tr>
-                <th>{{$mascotas->id}}</th>
-                <th>{{$mascotas->nombre_mascota}}</th>
-                <th>{{$mascotas->id_especialidad}}</th>
-                <th>{{$mascotas->fecha_nac}}</th>
-                <th>{{$mascotas->id_cli}}</th>
+                <th>{{$nacionalidades->id}}</th>
+                <th>{{$nacionalidades->nacionalidad}}</th>
             
             <th>
-            <form action="/mascota/{{{$mascotas->id}}}" method="post">
-                    @csrf
-                    @method('DELETE')
+            <form action="/nacionalidad/{{{$nacionalidades->id}}}" method="post">
 
-                 <a href="/mascota/{{$mascotas->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/mascota/{{$mascotas->id}}" class="btn btn-danger">Eliminar</a>
+                 <a href="/nacionalidad/{{$nacionalidades->id}}/edit"class="btn btn-primary">Editar</a>
+                 <a href="/nacionalidad/{{$nacionalidades->id}}" class="btn btn-danger">Eliminar</a>
                  </form> 
                 </th>
                 </tr>
