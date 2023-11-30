@@ -35,10 +35,16 @@
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="id_departamento" class="form-label">Departamento</label>
-                <input type="text" class="form-control" id="id_departamento" name="id_departamento">
             </div>
+                <div class="mb-3">
+                <label for="id_departamento" class="form-label">Departamento</label>
+                
+                <select class="form-control" id="id_departamento" name="id_departamento">
+                      <option value="">Seleccione departamento</option>
+                      @foreach ($depto as $item)
+                      <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+                      @endforeach
+                    </select>
 
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Guardar</button>

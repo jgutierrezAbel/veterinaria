@@ -16,7 +16,8 @@
                 <th>apellido</th>
                 <th>fecha de naciemiento</th>
                 <th>género</th>
-                <th>id del departamento</th>
+                
+                <th>Departamento al que pertenece</th>
                 
             </tr>
 
@@ -29,7 +30,8 @@
                 <th>{{$emplea->apellido}}</th>
                 <th>{{$emplea->fecha_nac}}</th>
                 <th>{{$emplea->id_genero}}</th>
-                <th>{{$emplea->id_departamento}}</th>
+                
+                <th>{{$emplea->departamento_nombre}}</th>
             
             <th>
             <form action="/empleado/{{{$emplea->id}}}" method="post">
