@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    
 
      
     public function up(): void
@@ -18,8 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->date('fecha_nac');
-            $table->foreign('id_especialidad');
-            $table->string('id_nacionalidad');
+            $table->string('id_especialidad');
             $table->string('id_genero');
             $table->timestamps();
         });

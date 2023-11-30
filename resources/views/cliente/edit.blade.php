@@ -7,52 +7,42 @@
 <div class="row">
   <div class="col">
 
-    <form action="/empleado/{{$editaremp->id}}" class="form-control" method="POST">
+    <form action="/cliente/{{$editarcli->id}}" class="form-control" method="POST">
       @csrf
       @method('PUT')
 
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre del empleado</label>
-        <input type="text" class="form-control" id="nombre" value="{{$editaremp->nombre}}" name="nombre">
+        <input type="text" class="form-control" id="nombre" value="{{$editarcli->nombre}}" name="nombre">
       </div>
 
       <div class="mb-3">
         <label for="apellido" class="form-label">Apellido del empleado</label>
-        <input type="text" class="form-control" id="apellido" value="{{$editaremp->apellido}}" name="apellido">
+        <input type="text" class="form-control" id="apellido" value="{{$editarcli->apellido}}" name="apellido">
       </div>
 
       <div class="mb-3">
         <label for="fecha_nac" class="form-label">Fecha de nacimiento</label>
-        <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editaremp->fecha_nac}}" name="fecha_nac">
+        <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editarcli->fecha_naci}}" name="fecha_nac">
       </div>
 
       <div class="mb-3">
         <label for="id_genero" class="form-label">Género del empleado</label>
         <div>
-          <input type="radio" id="masculino" value="masculino" name="id_genero" {{$editaremp->id_genero == 'masculino' ? 'checked' : ''}}>
+          <input type="radio" id="masculino" value="masculino" name="id_genero" {{$editarcli->id_genero == 'masculino' ? 'checked' : ''}}>
           <label for="masculino">Masculino</label>
         </div>
         <div>
-          <input type="radio" id="femenino" value="femenino" name="id_genero" {{$editaremp->id_genero == 'femenino' ? 'checked' : ''}}>
+          <input type="radio" id="femenino" value="femenino" name="id_genero" {{$editarcli->id_genero == 'femenino' ? 'checked' : ''}}>
           <label for="femenino">Femenino</label>
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="id_departamento" class="form-label">Departamento</label>
-        <select class="form-control" id="id_departamento" name="id_departamento">
-          <option value="">Seleccione departamento</option>
-          @foreach ($depto as $item)
-            <option value="{{ $item->id }}" {{$editaremp->id_departamento == $item->id ? 'selected' : ''}}>
-              {{ $item->nombre }}
-            </option>
-          @endforeach
-        </select>
-      </div>
+      
 
       <div class="mb-3">
         <button type="submit" class="btn btn-primary">Guardar</button>
-        <a href="/empleado" class="btn btn-danger">Cancelar</a>
+        <a href="/cliente" class="btn btn-danger">Cancelar</a>
       </div>
     </form>
 
