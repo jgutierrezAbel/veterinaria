@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-
+/*
 use app\Http\Controllers\loginControler;
+*/
 
 
 
@@ -20,7 +21,7 @@ use app\Http\Controllers\loginControler;
 |
 */
 
-
+/*
 route::view('/login',"login")->name('login');
 route::view('/registro',"register")->name('registro');
 route::view('/privada',"secret")->middleware('auth')->name('privada');
@@ -30,7 +31,7 @@ route::view('/privada',"secret")->middleware('auth')->name('privada');
 route::post('/validar-registro',[loginControler::class,'register'])->name('validar-registro');
 route::post('/inicia-sesion',[loginControler::class,'login'])->name('inicia-sesion');
 route::get('/logour',[loginControler::class,'logout'])->name('logout');
-
+*/
 
 route::resource('/departamento','App\Http\Controllers\departamentoController');
 route::resource('/generoh','App\Http\Controllers\generoController');
