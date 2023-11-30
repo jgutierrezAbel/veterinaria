@@ -30,8 +30,8 @@
 
 
 <div class="mb-3"> 
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <a href="/mascota" class="btn btn-danger">Cancelar</a>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="/mascota" class="btn btn-warning">Cancelar</a>
 
 </div>
 

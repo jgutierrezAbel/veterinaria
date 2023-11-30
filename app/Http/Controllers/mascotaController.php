@@ -13,7 +13,7 @@ class mascotaController extends Controller
     public function index()
     {
         $datosmascota=mascota::all();
-        return view('proveedores.index')->with('proveedores',$datosmascota);
+        return view('mascotas.index')->with('mascota',$datosmascota);
     }
 
     /**
@@ -21,7 +21,7 @@ class mascotaController extends Controller
      */
     public function create()
     {
-        return view('mascota.create');
+        return view('mascotas.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class mascotaController extends Controller
     {
         //
         $MascotaEliminar=mascota::find($id);
-        return view('mascota.delete')->with('MascotaEliminar',$MascotaEliminar);
+        return view('mascotas.delete')->with('MascotaEliminar',$MascotaEliminar);
     }
 
     /**
@@ -56,7 +56,7 @@ class mascotaController extends Controller
     {
         //
         $editar=mascota::find($id);
-        return view('mascota.edit')->with('editarmascota',$editar);
+        return view('mascotas.edit')->with('editarmascota',$editar);
     }
 
     /**
