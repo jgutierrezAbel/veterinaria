@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\mascota;
 use Illuminate\Http\Request;
 
 class mascotaController extends Controller
@@ -20,7 +21,7 @@ class mascotaController extends Controller
      */
     public function create()
     {
-        
+        return view('mascota.create');
     }
 
     /**
@@ -29,6 +30,13 @@ class mascotaController extends Controller
     public function store(Request $request)
     {
         //
+        $mascota=new mascota(); //Agente es la que dice el modelo 
+        $mascota->nombre_mascota=$request->get('nombre_mascota');
+        $mascota->id_especialidad=$request->get('id_especialidad');
+        $mascota->fecha_nac=$request->get('fecha_nac');
+        $mascota->id_cli=$request->get('id_cli');
+        $mascota-> save();
+        return redirect('mascota');
     }
 
     /**
@@ -37,6 +45,8 @@ class mascotaController extends Controller
     public function show(string $id)
     {
         //
+        $MascotaEliminar=mascota::find($id);
+        return view('mascota.delete')->with('MascotaEliminar',$MascotaEliminar);
     }
 
     /**
@@ -45,6 +55,8 @@ class mascotaController extends Controller
     public function edit(string $id)
     {
         //
+        $editar=mascota::find($id);
+        return view('mascota.edit')->with('editarmascota',$editar);
     }
 
     /**
@@ -53,6 +65,13 @@ class mascotaController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $mascota=mascota::find($id);
+        $mascota->nombre_mascota=$request->get('nombre_mascota');
+        $mascota->id_especialidad=$request->get('id_especialidad');
+        $mascota->fecha_nac=$request->get('fecha_nac');
+        $mascota->id_cli=$request->get('id_cli');
+        $mascota-> save();
+        return redirect('mascota');
     }
 
     /**
@@ -61,5 +80,9 @@ class mascotaController extends Controller
     public function destroy(string $id)
     {
         //
+        $eliminado=mascota::find($id);
+        $eliminado->delete();
+
+        return redirect('mascota');
     }
 }
