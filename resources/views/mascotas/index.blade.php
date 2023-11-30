@@ -6,40 +6,36 @@
 
 <a href="mascota/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de empleados</h1>
+<h1>Lista de Mascotas</h1>
 
     <table class ="table">
         <thead>
             <tr>
                 <th>id</th>
                 <th>nombre</th>
-                <th>apellido</th>
+                <th>id_especialidad</th>
                 <th>fecha de naciemiento</th>
-                <th>género</th>
-                
-                <th>Departamento al que pertenece</th>
+                <th>Id_Cliente</th>
                 
             </tr>
 
         <tbody>
         
-        @foreach ($emple as $emplea)
+        @foreach ($mascota as $mascotas)
             <tr>
-                <th>{{$emplea->id}}</th>
-                <th>{{$emplea->nombre}}</th>
-                <th>{{$emplea->apellido}}</th>
-                <th>{{$emplea->fecha_nac}}</th>
-                <th>{{$emplea->id_genero}}</th>
-                
-                <th>{{$emplea->departamento_nombre}}</th>
+                <th>{{$mascotas->id}}</th>
+                <th>{{$mascotas->nombre_mascota}}</th>
+                <th>{{$mascotas->id_especialidad}}</th>
+                <th>{{$mascotas->fecha_nac}}</th>
+                <th>{{$mascotas->id_cli}}</th>
             
             <th>
-            <form action="/empleado/{{{$emplea->id}}}" method="post">
+            <form action="/mascota/{{{$mascotas->id}}}" method="post">
                     @csrf
                     @method('DELETE')
 
-                 <a href="/empleado/{{$emplea->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/empleado/{{$emplea->id}}" class="btn btn-danger">Eliminar</a>
+                 <a href="/mascota/{{$mascotas->id}}/edit"class="btn btn-primary">Editar</a>
+                 <a href="/mascota/{{$mascotas->id}}" class="btn btn-danger">Eliminar</a>
                  </form> 
                 </th>
                 </tr>
