@@ -85,7 +85,7 @@
   </main>
 
   <footer>
-    <p>Contáctanos para programar una cita: <a href="tel:+123456789">123-456-789</a></p>
+    <p>Contáctanos para programar una cita: <a href="/portada">123-456-789</a></p>
     <p>Dirección: 123 Calle Principal, Ciudad</p>
   </footer>
 
