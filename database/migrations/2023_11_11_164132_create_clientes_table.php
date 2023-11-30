@@ -18,8 +18,6 @@ return new class extends Migration
             $table->date('fecha_naci',);
             $table->string('id_nacionalidad',8);
             $table->string('id_genero',8);
-            $table->id();
-
             $table->timestamps();
         });
     }

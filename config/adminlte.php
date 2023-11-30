@@ -394,16 +394,16 @@ return [
                 
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'Otras opciones'],
         [
-            'text'       => 'important',
+            'text'       => 'Cerrar Sesión',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => '/',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'No tocar',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'url'        => 'https://www.youtube.com/watch?v=VHNvnvarFOY',
         ],
         [
             'text'       => 'information',

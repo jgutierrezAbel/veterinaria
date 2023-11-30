@@ -11,7 +11,8 @@ class mascotaController extends Controller
      */
     public function index()
     {
-        //
+        $datosmascota=mascota::all();
+        return view('proveedores.index')->with('proveedores',$datosmascota);
     }
 
     /**
@@ -19,7 +20,7 @@ class mascotaController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
