@@ -59,6 +59,61 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+=======
+<div class="mb-3">
+  <label for="" class="form-label">Apellido del empleado</label>
+  <input type="text" class="form-control" id="apellido" value="{{$editaremp->apellido}}" name="apellido">
+</div>
+
+<div class="mb-3">
+  <label for="" class="form-label">Fecha de nacimiento</label>
+  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editaremp->fecha_nac}}" name="fecha_nac">
+</div>
+
+<div class="mb-3">
+                <label for="id_genero" class="form-label">Género del empleado</label>
+               @if ($editaremp->id_genero=="masculino")
+               <div>
+                    <input type="radio" id="masculino" checked value="{{$editaremp->id_genero}}" name="id_genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                <input type="radio" id="femenino" name="id_genero" value="femenino">
+                    <label for="femenino">Femenino</label>
+                </div>
+               @else
+               <div>
+                    <input type="radio" id="masculino" value="{{$editaremp->id_genero}}" name="id_genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                <input type="radio" id="femenino" checked name="id_genero" value="femenino">
+                    <label for="femenino">Femenino</label>
+                </div>
+               @endif
+
+
+<div class="mb-3">
+  <label for="" class="form-label">Departamento</label>
+  <input type="text" class="form-control datepicker" id="fecha_nac" value="{{$editaremp->id_departamento}}" name="id_departamento">
+</div>
+
+<div class="mb-3"> 
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="/empleado" class="btn btn-danger">Cancelar</a>
+
+</div>
+
+
+
+</form>
+
+</div>
+
+
+</div>
+>>>>>>> e3c55de77c87f95cf4029cb1cb9d47bfddc92dbf
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
