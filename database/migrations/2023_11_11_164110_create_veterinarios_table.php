@@ -17,10 +17,7 @@ return new class extends Migration
             $table->string('apellido');
             $table->date('fecha_nac');
             $table->string('id_especialidad');
-<<<<<<< HEAD
-=======
             $table->string('id_nacionalidad');
->>>>>>> 982d58230624b77bcb7995c7b5f83da9406d9821
             $table->string('id_genero');
             $table->timestamps();
         });

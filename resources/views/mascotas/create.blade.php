@@ -13,18 +13,76 @@
   <label for="" class="form-label">Nombre</label>
   <input type="text" class="form-control" id="nombre_mascota"  name="nombre_mascota">
 </div>
-<div class="mb-3">
-  <label for="" class="form-label">Id_Especialidad</label>
-  <input type="text" class="form-control" id="id_especialidad"  name="id_especialidad">
-</div>
+
 <div class="mb-3">
     <label for="fecha_nac" class="form-label">Fecha de nacimiento (YYYY-MM-DD)</label>
     <input type="text" class="form-control" id="fecha_nac" name="fecha_nac" pattern="\d{4}-\d{2}-\d{2}" title="Por favor ingrese una fecha en formato YYYY-MM-DD">
 </div>
+
 <div class="mb-3">
-  <label for="" class="form-label">Id_Cliente</label>
-  <input type="text" class="form-control" id="id_cli"  name="id_cli">
+ <label for="id_genero" class="form-label">Género del empleado</label>
+   <div>
+      <input type="radio" id="masculino" name="id_genero" value="masculino">
+        <label for="masculino">Macho</label>
+       </div>
+        <div>
+         <input type="radio" id="femenino" name="id_genero" value="femenino">
+        <label for="femenino">Hembra</label>
+          </div>
+    </div>
+
+
+
+<div class="mb-3">
+<label for="clie" class="form-label">seleccione el cliente</label>
+                
+ <select class="form-control" id="clie" name="clie">
+ <option value="">Seleccione el cliente</option>
+ @if(isset($clie))
+    @foreach ($clie as $item)
+  <option value="{{ $item->id }}">{{ $item->id }}</option>
+  @endforeach
+  @endif
+  </select>
 </div>
+
+
+
+            
+
+
+
+
+<div class="mb-3">
+<label for="tipo" class="form-label">seleccione un tipo</label>
+                
+ <select class="form-control" id="tipo" name="tipo">
+ <option value="">Seleccione un tipo</option>
+    @foreach ($tipo as $item)
+  <option value="{{ $item->id }}">{{ $item->tipo_mascota }}</option>
+  @endforeach
+  </select>
+</div>
+
+<div class="mb-3">
+<label for="espe" class="form-label">seleccione la especialidad</label>
+                
+ <select class="form-control" id="espe" name="espe">
+ <option value="">Seleccione una especialidad</option>
+    @foreach ($espe as $item)
+  <option value="{{ $item->id }}">{{ $item->tipo_especialidad }}</option>
+  @endforeach
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
 
 <div class="mb-3"> 
     <button type="submit" class="btn btn-primary">Guardar</button>

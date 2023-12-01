@@ -45,7 +45,7 @@
                       @foreach ($depto as $item)
                       <option value="{{ $item->id }}">{{ $item->nombre }}</option>
                       @endforeach
-                    </select>
+                   </select>
 </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Guardar</button>
