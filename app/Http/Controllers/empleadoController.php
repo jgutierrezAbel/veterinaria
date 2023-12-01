@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\departamento;
+use App\Models\Departamento;
 use App\Models\empleado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -30,7 +30,7 @@ class empleadoController extends Controller
      */
     public function create()
     {
-        $depto = departamento::all();
+        $depto = Departamento::all();
 
         return view('empleado.create', ['depto' => $depto]);
     }
@@ -63,7 +63,7 @@ class empleadoController extends Controller
     public function edit(string $id)
     {
         $editar = empleado::find($id);
-        $depto = departamento::all();
+        $depto = Departamento::all();
         return view('empleado.edit', ['depto' => $depto])->with('editaremp', $editar);
     }
 

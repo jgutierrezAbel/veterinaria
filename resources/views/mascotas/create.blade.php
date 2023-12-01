@@ -45,6 +45,16 @@
   
   </select>
 </div>
+<div>
+ <div class="mb-3">
+ <label for="cli" class="form-label">cliente</label>
+                
+<select class="form-control" id="cli" name="cli">
+  <option value="">Seleccione cliente</option>
+  @foreach ($cli as $item)
+ <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+  @endforeach
+ </select>
 
 
 

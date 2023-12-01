@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cliente;
-use App\Models\especialidades;
 use App\Models\mascota;
 use App\Models\tipo_mascota;
 use Illuminate\Http\Request;
@@ -24,14 +22,7 @@ class mascotaController extends Controller
      */
     public function create()
     {
-        $tipo=tipo_mascota::all();
-        $espe=especialidades::all();
-        $clie=cliente::all();
-        return view('mascotas.create',
-        ['tipo'=>$tipo],
-        ['espe'=>$espe],
-        ['clie'=>$clie]
-        );
+        return view('mascotas.create');
     }
 
     /**
@@ -45,8 +36,7 @@ class mascotaController extends Controller
         $mascota->id_especialidad=$request->get('espe');
         $mascota->id_tipo=$request->get('tipo');
         $mascota->fecha_nac=$request->get('fecha_nac');
-        $mascota->id_generomas = $request->input('id_genero');
-        $mascota->id_cli=$request->get('clie');
+        $mascota->id_cli=$request->get('id_cli');
         $mascota-> save();
         return redirect('mascota');
     }
