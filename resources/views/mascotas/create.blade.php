@@ -25,6 +25,16 @@
   <label for="" class="form-label">Id_Cliente</label>
   <input type="text" class="form-control" id="id_cli"  name="id_cli">
 </div>
+<div>
+ <div class="mb-3">
+ <label for="cli" class="form-label">cliente</label>
+                
+<select class="form-control" id="cli" name="cli">
+  <option value="">Seleccione cliente</option>
+  @foreach ($cli as $item)
+ <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+  @endforeach
+ </select>
 
 <div class="mb-3"> 
     <button type="submit" class="btn btn-primary">Guardar</button>

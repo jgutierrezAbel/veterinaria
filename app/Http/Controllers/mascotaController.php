@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\cliente;
 use App\Models\mascota;
 use Illuminate\Http\Request;
 
@@ -21,7 +21,9 @@ class mascotaController extends Controller
      */
     public function create()
     {
-        return view('mascotas.create');
+        $cliente=cliente::all();
+
+        return view('mascotas.create',  ['cli' => $cliente]);
     }
 
     /**
@@ -34,7 +36,7 @@ class mascotaController extends Controller
         $mascota->nombre_mascota=$request->get('nombre_mascota');
         $mascota->id_especialidad=$request->get('id_especialidad');
         $mascota->fecha_nac=$request->get('fecha_nac');
-        $mascota->id_cli=$request->get('id_cli');
+        $mascota->id_cli=$request->get('cli');
         $mascota-> save();
         return redirect('mascota');
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\departamento;
+use App\Models\Departamento;
 use Illuminate\Http\Request;
 
 class departamentoController extends Controller
@@ -13,7 +13,7 @@ class departamentoController extends Controller
     public function index()
     {
         //
-        $datodepa=departamento::all();
+        $datodepa=Departamento::all();
         return view('departamento.index')->with('depa',$datodepa);
     }
 
@@ -32,7 +32,7 @@ class departamentoController extends Controller
     public function store(Request $request)
     {
         //
-        $depa=new departamento(); //Agente es la que dice el modelo 
+        $depa=new Departamento(); //Agente es la que dice el modelo 
         $depa->nombre=$request->get('nombre');
        
       
@@ -55,7 +55,7 @@ class departamentoController extends Controller
     public function edit(string $id)
     {
         //
-        $editar= departamento::find($id);
+        $editar= Departamento::find($id);
         return view('departamento.edit')->with('editarcli',$editar);
        
     }
@@ -67,7 +67,7 @@ class departamentoController extends Controller
     {
         //
 
-        $depa=departamento::find($id);
+        $depa=Departamento::find($id);
         $depa->nombre=$request->get('nombre');
         
        
@@ -81,7 +81,7 @@ class departamentoController extends Controller
     public function destroy(string $id)
     {
         //
-        $eliminado=departamento::find($id);
+        $eliminado=Departamento::find($id);
         $eliminado->delete();
 
         return redirect('departamento');
