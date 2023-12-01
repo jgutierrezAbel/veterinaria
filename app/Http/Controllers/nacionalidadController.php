@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\nacionalidad;
 use Illuminate\Http\Request;
 
 class nacionalidadController extends Controller
@@ -11,7 +11,8 @@ class nacionalidadController extends Controller
      */
     public function index()
     {
-        //
+        $datosnacionalidad=nacionalidad::all();
+        return view('nacionalidad.index')->with('nacionalidad',$datosnacionalidad);
     }
 
     /**
@@ -19,7 +20,7 @@ class nacionalidadController extends Controller
      */
     public function create()
     {
-        //
+        return view('nacionalidad.create');
     }
 
     /**
@@ -27,7 +28,10 @@ class nacionalidadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nacionalidad=new nacionalidad(); //Agente es la que dice el modelo 
+        $nacionalidad->nacionalidad=$request->get('nacionalidad');
+        $nacionalidad-> save();
+        return redirect('nacionalidad');
     }
 
     /**
@@ -35,7 +39,8 @@ class nacionalidadController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $NacionalidadEliminar=nacionalidad::find($id);
+        return view('nacionalidad.delete')->with('NacionalidadEliminar',$NacionalidadEliminar);
     }
 
     /**
@@ -43,7 +48,8 @@ class nacionalidadController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $editarnacionalidad=nacionalidad::find($id);
+        return view('nacionalidad.edit')->with('editarnacionalidad',$editarnacionalidad);
     }
 
     /**
@@ -51,7 +57,10 @@ class nacionalidadController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $nacionalidad=nacionalidad::find($id);
+        $nacionalidad->nacionalidad=$request->get('nacionalidad');
+        $nacionalidad-> save();
+        return redirect('nacionalidad');
     }
 
     /**
@@ -59,6 +68,9 @@ class nacionalidadController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $eliminado=nacionalidad::find($id);
+        $eliminado->delete();
+
+        return redirect('nacionalidad');
     }
 }

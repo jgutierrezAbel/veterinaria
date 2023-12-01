@@ -38,11 +38,11 @@
                 
  <select class="form-control" id="clie" name="clie">
  <option value="">Seleccione el cliente</option>
- @if(isset($clie))
+ 
     @foreach ($clie as $item)
   <option value="{{ $item->id }}">{{ $item->id }}</option>
   @endforeach
-  @endif
+  
   </select>
 </div>
 
