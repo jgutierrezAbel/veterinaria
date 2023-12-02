@@ -24,16 +24,7 @@
                     <input type="text" class="form-control" id="fecha_nac" value="{{$editarvet->fecha_nac}}" name="fecha_nac" pattern="\d{4}-\d{2}-\d{2}" title="Por favor ingrese una fecha en formato YYYY-MM-DD">
                 </div>
 
-                <div class="mb-3">
-                    <label for="id_especialidad" class="form-label">Especialidad</label>
-                    <input type="text" class="form-control" id="id_especialidad" value="{{$editarvet->id_especialidad}}" name="id_especialidad">
-                </div>
-
-                <div class="mb-3">
-                    <label for="id_nacionalidad" class="form-label">Nacionalidad</label>
-                    <input type="text" class="form-control" id="id_nacionalidad" value="{{$editarvet->id_nacionalidad}}" name="id_nacionalidad">
-                </div>
-
+                
                 <div class="mb-3">
                     <label for="id_genero" class="form-label">Género del veterinario</label>
                     <div>
@@ -45,6 +36,33 @@
                         <label for="femenino">Femenino</label>
                     </div>
                 </div>
+                
+<div class="mb-3">
+<label for="espe" class="form-label">Especialidad</label>
+ <select class="form-control" id="espe" name="espe">
+ @foreach ($espe as $item)
+<option value="{{ $item->id }}" {{$editarvet->id_especialidad == $item->id ? 'selected' : ''}}>
+ {{ $item->tipo_especialidad }}
+  </option>
+ @endforeach
+</select>
+ </div>
+
+ <div class="mb-3">
+<label for="nacio" class="form-label">Nacionalidad</label>
+ <select class="form-control" id="nacio" name="nacio">
+          @foreach ($nacio as $item)
+            <option value="{{ $item->id }}" {{$editarvet->id_nacionalidad == $item->id ? 'selected' : ''}}>
+              {{ $item->nacionalidad }}
+            </option>
+          @endforeach
+        </select>
+      </div>
+
+
+
+
+
 
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Guardar</button>

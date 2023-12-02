@@ -35,7 +35,7 @@
                 </div>
             </div>
             
-            <div class="mb-3">
+<div class="mb-3">
 <label for="nacio" class="form-label">seleccione la nacionalidad</label>
                 
  <select class="form-control" id="nacio" name="nacio">

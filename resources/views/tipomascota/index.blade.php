@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>Tipo mascotas</th>
+                <th>Tip mascotas</th>
                 <th>descripcion</th>
             </tr>
 
