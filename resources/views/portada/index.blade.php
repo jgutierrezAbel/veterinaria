@@ -2,7 +2,7 @@
 
 @section('hijos')
 
-<h1>Bienvenido a Veterinaria Unicah</h1>
+<h1>Bienvenido a Veterinaria JJR</h1>
 
 
 <h2>-----------------------------</h2>

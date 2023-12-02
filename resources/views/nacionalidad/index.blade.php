@@ -28,7 +28,7 @@
                     @csrf
                     @method('DELETE')
                  <a href="/nacionalidad/{{$nacionalidades->id}}/edit"class="btn btn-primary">Editar</a>
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <a href="/nacionalidad/{{$nacionalidades->id}}/"class="btn btn-danger">Elimar</a>
                  </form> 
                 </th>
                 </tr>

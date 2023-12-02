@@ -34,7 +34,7 @@
 
                  <a href="/tipomascota/{{$tipe->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <a href="/tipomascota/{{$tipe->id}}" class="btn btn-danger">Eliminar</a>
 
                 </form>
                 </th>

@@ -33,7 +33,7 @@
 
                  <a href="/especialidades/{{$espes->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <a href="/especialidades/{{$espes->id}}"class="btn btn-danger">Eliminar</a>
 
                 </form>
                 </th>

@@ -49,9 +49,6 @@ route::resource('/cita','App\Http\Controllers\citaController');
 route::resource('/veterinario','App\Http\Controllers\veterinarioController');
 
 
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });

@@ -52,6 +52,7 @@ class veterinarioController extends Controller
     {
         $veteliminar=veterinario::find($id);
         return view('veterinario.delete')->with('veteliminar',$veteliminar);
+        
     }
 
     /**
