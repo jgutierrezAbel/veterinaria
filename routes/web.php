@@ -48,9 +48,6 @@ route::resource('/tratamiento','App\Http\Controllers\tratamientoController');
 route::resource('/cita','App\Http\Controllers\citaController');
 
 
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });

@@ -42,7 +42,8 @@ class especialidadesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $especialidadEliminar=especialidades::find($id);
+        return view('especialidades.delete')->with('especialidadEliminar',$especialidadEliminar);
     }
 
     /**

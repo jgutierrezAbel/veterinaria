@@ -32,7 +32,7 @@
 
                  <a href="/proveedores/{{$proveedore->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <button type="submit" class = "btn btn-danger">Eliminar </button>
 
                 </form>
                 </th>

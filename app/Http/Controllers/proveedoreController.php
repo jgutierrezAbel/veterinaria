@@ -46,7 +46,8 @@ class proveedoreController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $proveedorEliminar=tratamiento::find($id);
+        return view('proveedor.delete')->with('proveedorEliminar',$proveedorEliminar);
     }
 
     /**

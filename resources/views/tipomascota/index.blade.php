@@ -21,7 +21,7 @@
         @foreach ($tipo as $tipe)
             <tr>
                 <th>{{$tipe->id}}</th>
-                <th>{{$tipe->tipo_nombre}}</th>
+                <th>{{$tipe->tipo_mascota}}</th>
                 <th>{{$tipe->descripcion}}</th>
                 
 
@@ -34,7 +34,7 @@
 
                  <a href="/tipomascota/{{$tipe->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <a href="/tipomascota/{{$tipe->id}}" class="btn btn-danger">Eliminar</a>
 
                 </form>
                 </th>
