@@ -46,7 +46,8 @@ class departamentoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $departamentoEliminar=Departamento::find($id);
+        return view('departamento.delete')->with('departamentoEliminar',$departamentoEliminar);
     }
 
     /**
