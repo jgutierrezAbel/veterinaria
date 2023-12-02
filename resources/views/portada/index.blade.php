@@ -19,6 +19,8 @@
 <a href="/mascota"class="btn btn-warning">Ver Mascotas</a>
 <a href="/nacionalidad"class="btn btn-warning">Nacionalidad</a>.
 <a href="/cliente"class="btn btn-warning">ver cliente</a>
+<a href="/tratamiento"class="btn btn-warning">Tratamientos</a>
+<a href="/cita"class="btn btn-warning">Citas</a>
 @endsection
 
 

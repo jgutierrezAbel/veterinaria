@@ -18,11 +18,7 @@ return new class extends Migration
             $table->date('fecha_nac');
             $table->string('id_cli');
             $table->string('id_generomas');
-<<<<<<< HEAD
-            $table->string('id_tipo');
-=======
             $table->string('tipomas');
->>>>>>> 8eebf898854990bbd7b897694b6790e769fbc8b8
             $table->timestamps();
         });
     }

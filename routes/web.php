@@ -44,6 +44,8 @@ route::resource('/portada','App\Http\Controllers\portadaController');
 route::resource('/empleado','App\Http\Controllers\empleadoController');
 route::resource('/mascota','App\Http\Controllers\mascotaController');
 route::resource('/cliente','App\Http\Controllers\clienteController');
+route::resource('/tratamiento','App\Http\Controllers\tratamientoController');
+route::resource('/cita','App\Http\Controllers\citaController');
 
 
 
