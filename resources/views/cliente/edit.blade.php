@@ -37,6 +37,17 @@
           <label for="femenino">Femenino</label>
         </div>
       </div>
+     
+      <div class="mb-3">
+        <label for="nacio" class="form-label">Nacionalidad</label>
+        <select class="form-control" id="nacio" name="nacio">
+          @foreach ($nacio as $item)
+            <option value="{{ $item->id }}" {{$editarcli->id_nacionalidad == $item->id ? 'selected' : ''}}>
+              {{ $item->nacionalidad }}
+            </option>
+          @endforeach
+        </select>
+      </div>
 
       
 

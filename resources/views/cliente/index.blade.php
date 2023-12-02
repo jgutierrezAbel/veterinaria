@@ -16,6 +16,7 @@
                 <th>apellido</th>
                 <th>fecha de naciemiento</th>
                 <th>género</th>
+                <th>nacionalidad</th>
                 
             </tr>
 
@@ -28,6 +29,7 @@
                 <th>{{$emplea->apellido}}</th>
                 <th>{{$emplea->fecha_naci}}</th>
                 <th>{{$emplea->id_genero}}</th>
+                <th>{{$emplea->id_nacionalidad}}</th>
                 
                 
             

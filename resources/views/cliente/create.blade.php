@@ -34,6 +34,18 @@
                     <label for="femenino">Femenino</label>
                 </div>
             </div>
+            
+            <div class="mb-3">
+<label for="nacio" class="form-label">seleccione la nacionalidad</label>
+                
+ <select class="form-control" id="nacio" name="nacio">
+ <option value="">Seleccione una nacionalidad</option>
+    @foreach ($nacio as $item)
+  <option value="{{ $item->id }}">{{ $item->nacionalidad }}</option>
+  @endforeach
+  </select>
+</div>
+
 
            
 

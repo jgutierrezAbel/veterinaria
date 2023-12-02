@@ -25,8 +25,10 @@
             <th>
             <form action="/nacionalidad/{{{$nacionalidades->id}}}" method="post">
 
+                    @csrf
+                    @method('DELETE')
                  <a href="/nacionalidad/{{$nacionalidades->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/nacionalidad/{{$nacionalidades->id}}" class="btn btn-danger">Eliminar</a>
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
                  </form> 
                 </th>
                 </tr>

@@ -20,7 +20,7 @@
 </div>
 
 <div class="mb-3">
- <label for="id_genero" class="form-label">Género del empleado</label>
+ <label for="id_genero" class="form-label">Género mascota</label>
    <div>
       <input type="radio" id="masculino" name="id_generomas" value="masculino">
         <label for="masculino">Macho</label>

@@ -7,6 +7,7 @@ use App\Models\especialidades;
 use App\Models\mascota;
 use App\Models\tipo_mascota;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class mascotaController extends Controller
 {
@@ -15,7 +16,12 @@ class mascotaController extends Controller
      */
     public function index()
     {
-        $datosmascota=mascota::all();
+        $datosmascota=DB::table('mascotas')
+        ->join('tipo_mascotas', 'mascotas.id_tipo', '=', 'tipo_mascotas.id')
+        ->select('mascotas.*', 'tipo_mascotas.tipo_mascota as tipo_mascotas_nombre')
+        ->get();
+        
+        
         return view('mascotas.index')->with('mascota',$datosmascota);
     }
 
@@ -55,6 +61,7 @@ class mascotaController extends Controller
     public function show(string $id)
     {
         //
+        
         $MascotaEliminar=mascota::find($id);
         return view('mascotas.delete')->with('MascotaEliminar',$MascotaEliminar);
     }
@@ -66,7 +73,10 @@ class mascotaController extends Controller
     {
         //
         $editar=mascota::find($id);
-        return view('mascotas.edit')->with('editarmascota',$editar);
+        $clie=cliente::all();
+        $tipo=tipo_mascota::all();
+        $espe=especialidades::all();
+        return view('mascotas.edit')->with('editarmascota',$editar)->with("cli",$clie)->with("ti",$tipo)->with("es",$espe);
     }
 
     /**
@@ -77,9 +87,12 @@ class mascotaController extends Controller
         //
         $mascota=mascota::find($id);
         $mascota->nombre_mascota=$request->get('nombre_mascota');
-        $mascota->id_especialidad=$request->get('id_especialidad');
+        $mascota->id_especialidad=$request->get('espe');
         $mascota->fecha_nac=$request->get('fecha_nac');
-        $mascota->id_cli=$request->get('id_cli');
+        $mascota->id_generomas=$request->get('id_generomas');
+        $mascota->id_cli=$request->get('cli');
+        $mascota->id_tipo=$request->get('tipo');
+
         $mascota-> save();
         return redirect('mascota');
     }

@@ -37,7 +37,7 @@
                     @method('DELETE')
 
                  <a href="/empleado/{{$emplea->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/empleado/{{$emplea->id}}" class="btn btn-danger">Eliminar</a>
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
                  </form> 
                 </th>
                 </tr>

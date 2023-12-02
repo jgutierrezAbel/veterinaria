@@ -14,8 +14,11 @@
                 <th>id</th>
                 <th>nombre</th>
                 <th>id_especialidad</th>
+                <th>tipo</th>
                 <th>fecha de naciemiento</th>
                 <th>Id_Cliente</th>
+                <th>tipo</th>
+
                 
             </tr>
 
@@ -28,14 +31,17 @@
                 <th>{{$mascotas->id_especialidad}}</th>
                 <th>{{$mascotas->fecha_nac}}</th>
                 <th>{{$mascotas->id_cli}}</th>
+                <th>{{$mascotas->tipo_mascotas_nombre}}</th>
             
             <th>
+                <br>
+            </br>
             <form action="/mascota/{{{$mascotas->id}}}" method="post">
                     @csrf
                     @method('DELETE')
 
                  <a href="/mascota/{{$mascotas->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/mascota/{{$mascotas->id}}" class="btn btn-danger">Eliminar</a>
+                 <button type="submit" class = "btn btn-primary">Eliminar </button>
                  </form> 
                 </th>
                 </tr>
