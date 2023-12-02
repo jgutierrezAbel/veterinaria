@@ -22,27 +22,18 @@
 <div class="mb-3">
  <label for="id_genero" class="form-label">Género del empleado</label>
    <div>
-      <input type="radio" id="masculino" name="id_genero" value="masculino">
+      <input type="radio" id="masculino" name="id_generomas" value="masculino">
         <label for="masculino">Macho</label>
        </div>
         <div>
-         <input type="radio" id="femenino" name="id_genero" value="femenino">
+         <input type="radio" id="femenino" name="id_generomas" value="femenino">
         <label for="femenino">Hembra</label>
           </div>
     </div>
 
 
 
-<div class="mb-3">
-<label for="clie" class="form-label">seleccione el cliente</label>
-                
- <select class="form-control" id="clie" name="clie">
- <option value="">Seleccione el cliente</option>
- 
-    @foreach ($clie as $item)
-  <option value="{{ $item->id }}">{{ $item->id }}</option>
-  @endforeach
-  
+
   </select>
 </div>
 <div>
@@ -52,7 +43,7 @@
 <select class="form-control" id="cli" name="cli">
   <option value="">Seleccione cliente</option>
   @foreach ($cli as $item)
- <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+ <option value="{{ $item->id}}">{{ $item->nombre}}</option>
   @endforeach
  </select>
 
@@ -68,7 +59,7 @@
                 
  <select class="form-control" id="tipo" name="tipo">
  <option value="">Seleccione un tipo</option>
-    @foreach ($tipo as $item)
+    @foreach ($ti as $item)
   <option value="{{ $item->id }}">{{ $item->tipo_mascota }}</option>
   @endforeach
   </select>
@@ -79,7 +70,7 @@
                 
  <select class="form-control" id="espe" name="espe">
  <option value="">Seleccione una especialidad</option>
-    @foreach ($espe as $item)
+    @foreach ($es as $item)
   <option value="{{ $item->id }}">{{ $item->tipo_especialidad }}</option>
   @endforeach
   </select>

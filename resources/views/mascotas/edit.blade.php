@@ -15,18 +15,12 @@
   <label for="" class="form-label">Nombre</label>
   <input type="text" class="form-control" id="nombre_mascota" value="{{$editarmascota->nombre_mascota}}" name="nombre_mascota">
 </div>
-<div class="mb-3">
-  <label for="" class="form-label">Id_Especialidad</label>
-  <input type="text" class="form-control" id="id_especialidad" value="{{$editarmascota->id_especialidad}}" name="id_especialidad">
-</div>
+
 <div class="mb-3">
     <label for="fecha_nac" class="form-label">Fecha de nacimiento (YYYY-MM-DD)</label>
     <input type="text" class="form-control" id="fecha_nac" value="{{$editarmascota->fecha_nac}}" name="fecha_nac" pattern="\d{4}-\d{2}-\d{2}" title="Por favor ingrese una fecha en formato YYYY-MM-DD">
 </div>
-<div class="mb-3">
-  <label for="" class="form-label">Id_Cliente</label>
-  <input type="text" class="form-control" id="id_cli" value="{{$editarmascota->id_cli}}" name="id_cli">
-</div>
+
 
 
 <div class="mb-3"> 
