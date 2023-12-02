@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\especialidades;
+use App\Models\nacionalidad;
 use App\Models\veterinario;
 use Illuminate\Http\Request;
 
@@ -12,6 +15,7 @@ class veterinarioController extends Controller
     public function index()
     {
         $datovet=veterinario::all();
+        
         return view('veterinario.index')->with('vet',$datovet);
     }
 
@@ -20,7 +24,9 @@ class veterinarioController extends Controller
      */
     public function create()
     {
-        return view('veterinario.create');
+        $espe=especialidades::all();
+        $nacio=nacionalidad::all();
+        return view('veterinario.create')->with('espe',$espe)->with('nacio',$nacio);
     }
 
     /**
@@ -32,8 +38,8 @@ class veterinarioController extends Controller
         $vet->nombre=$request->get('nombre');
         $vet->apellido=$request->get('apellido');
         $vet->fecha_nac=$request->get('fecha_nac');
-        $vet->id_especialidad=$request->get('id_especialidad');
-        $vet->id_nacionalidad=$request->get('id_nacionalidad');
+        $vet->id_especialidad=$request->get('espe');
+        $vet->id_nacionalidad=$request->get('nacio');
         $vet->id_genero=$request->get('id_genero');
         $vet-> save();
         return redirect('veterinario');
@@ -54,7 +60,9 @@ class veterinarioController extends Controller
     public function edit(string $id)
     {
         $editar= veterinario::find($id);
-        return view('veterinario.edit')->with('editarvet',$editar);
+        $espe=especialidades::all();
+        $nacio=nacionalidad::all();
+        return view('veterinario.edit')->with('editarvet',$editar)->with('espe',$espe)->with('nacio',$nacio);;
     }
 
     /**
@@ -66,8 +74,8 @@ class veterinarioController extends Controller
         $vet->nombre=$request->get('nombre');
         $vet->apellido=$request->get('apellido');
         $vet->fecha_nac=$request->get('fecha_nac');
-        $vet->id_especialidad=$request->get('id_especialidad');
-        $vet->id_nacionalidad=$request->get('id_nacionalidad');
+        $vet->id_especialidad=$request->get('espe');
+        $vet->id_nacionalidad=$request->get('nacio');
         $vet->id_genero=$request->get('id_genero');
         $vet-> save();
         return redirect('veterinario');

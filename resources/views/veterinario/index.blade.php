@@ -26,12 +26,13 @@
                     <td>{{$vete->fecha_nac}}</td>
                     <td>{{$vete->id_especialidad}}</td>
                     <td>{{$vete->id_nacionalidad}}</td>
-                    <td>{{$vete->id_genero}}</td>                    <td>
+                    <td>{{$vete->id_genero}}</td>                   
+                     <td>
                         <form action="/veterinario/{{{$vete->id}}}" method="post">
                             @csrf
                             @method('DELETE')
                             <a href="/veterinario/{{$vete->id}}/edit" class="btn btn-primary">Editar</a>
-                            <a href="/veterinario/{{$vete->id}}" class="btn btn-danger">Eliminar</a>
+                            <button type="submit" class = "btn btn-primary">Eliminar </button>
                         </form>
                     </td>
                 </tr>

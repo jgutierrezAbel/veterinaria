@@ -27,15 +27,9 @@
     <input type="text" class="form-control" id="fecha_nac" name="fecha_nac" pattern="\d{4}-\d{2}-\d{2}" title="Por favor ingrese una fecha en formato YYYY-MM-DD">
 </div>
 
-<div class="mb-3">
-        <label for="apellido" class="form-label">Especialidad</label>
-        <input type="text" class="form-control" id="id_especialidad" name="id_especialidad">
-      </div>
+
       
-      <div class="mb-3">
-        <label for="apellido" class="form-label">Nacionalidad</label>
-        <input type="text" class="form-control" id="id_nacionalidad" name="id_nacionalidad">
-      </div>
+     
 
       <div class="mb-3">
         <label for="id_genero" class="form-label">Género del veterinario</label>
@@ -48,6 +42,38 @@
           <label for="femenino">Femenino</label>
         </div>
       </div>
+
+
+ <div class="mb-3">
+<label for="nacio" class="form-label">seleccione la nacionalidad</label>
+                
+ <select class="form-control" id="nacio" name="nacio">
+ <option value="">Seleccione una nacionalidad</option>
+    @foreach ($nacio as $item)
+  <option value="{{ $item->id }}">{{ $item->nacionalidad }}</option>
+  @endforeach
+  </select>
+</div>
+
+<div class="mb-3">
+<label for="espe" class="form-label">seleccione la especialidad</label>
+                
+ <select class="form-control" id="espe" name="espe">
+ <option value="">Seleccione una especialidad</option>
+    @foreach ($espe as $item)
+  <option value="{{ $item->id }}">{{ $item->tipo_especialidad }}</option>
+  @endforeach
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
 
       <div class="mb-3">
         <button type="submit" class="btn btn-primary">Guardar</button>

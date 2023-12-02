@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>Tipo mascotas</th>
+                <th>Tip mascotas</th>
                 <th>descripcion</th>
             </tr>
 
@@ -21,7 +21,7 @@
         @foreach ($tipo as $tipe)
             <tr>
                 <th>{{$tipe->id}}</th>
-                <th>{{$tipe->tipo_nombre}}</th>
+                <th>{{$tipe->tipo_mascota}}</th>
                 <th>{{$tipe->descripcion}}</th>
                 
 
