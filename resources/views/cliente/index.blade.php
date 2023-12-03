@@ -3,10 +3,13 @@
 @section('hijos')
 
 
-
+<div style="display: flex; justify-content: space-between;">
 <a href="cliente/create"class="btn btn-success">Crear</a>
+        <a href="/nacionalidad" class="btn btn-info">Nacionalidades</a>
+    </div>
+    
 <table class="table table-striped table-hover">
-<h1>Lista de clientes</h1>
+<h1 class="text-center mt-3">Lista de clientes</h1>
 
     <table class ="table">
         <thead>
@@ -40,7 +43,7 @@
 
                  <a href="/cliente/{{$emplea->id}}/edit"class="btn btn-primary">Editar</a>
 
-                 <button type="submit" class = "btn btn-warning">Eliminar </button>
+                 <button type="submit" class = "btn btn-danger">Eliminar </button>
                  
                  </form> 
                 </th>
@@ -61,21 +64,8 @@
 
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 @endsection

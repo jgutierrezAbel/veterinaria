@@ -294,7 +294,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Búsqueda',
             'topnav_right' => true,
         ],
         [
@@ -305,7 +305,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Búsqueda',
         ],
         [
             'text' => 'blog',
@@ -313,13 +313,12 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'text'        => 'Inicio',
+            'url'         => '/portada',
+            'icon'        => 'fas fa-fw fa-home',
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        
         [
             'text' => 'Acerca de nosotros',
             'url'  => '/portada/about',
@@ -327,73 +326,128 @@ return [
         ],
 
         [
-            'text' => 'profile',
+            'text'    => 'Menú',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text'    => 'Cita',
+                    'url'     => '/cita',
+                    'icon_color' => 'blue',
+                    'submenu' => [
+                        [
+                            'text' => 'Citas veterinarias',
+                            'url'  => '/cita',
+                        ],
+                        
+                       
+                    ],
+                ],
+
+                [
+                    'text'    => 'Clientes',
+                    'url'     => '/cliente',
+                    'icon_color' => 'blue',
+                    
+                    'submenu' => [
+                        [
+                            'text' => 'Lista de clientes',
+                            'url'  => '/cliente',
+                        ],
+
+                        [
+                            'text' => 'Lista de nacionalidades',
+                            'url'  => '/nacionalidad',
+                        ],
+                        
+                       
+                    ],
+                ],
+
+                [
+                    'text'    => 'Veterinarios',
+                    'url'     => '/veterinario',
+                    'icon_color' => 'blue',
+                    'submenu' => [
+                        [
+                            'text' => 'Lista de veterinarios',
+                            'url'  => '/veterinario',
+                        ],
+
+                        [
+                            'text' => 'Especialidades',
+                            'url'  => '/especialidades',
+                        ],
+                        
+                       
+                    ],
+                ],
+
+                [
+                    'text'    => 'Mascotas',
+                    'url'     => '/mascotas',
+                    'icon_color' => 'blue',
+                    'submenu' => [
+                        [
+                            'text' => 'Lista de mascotas',
+                            'url'  => '/mascota',
+                        ],
+
+                        [
+                            'text' => 'Especies de mascotas',
+                            'url'  => '/tipomascotas',
+                        ],
+                        
+                       
+                    ],
+                ],
+
+                [
+                    'text'    => 'Empleados',
+                    'url'     => '/empleado',
+                    'icon_color' => 'blue',
+                    'submenu' => [
+                        [
+                            'text' => 'Lista de empleados',
+                            'url'  => '/empleado',
+                        ],
+
+                        [
+                            'text' => 'Lista de departamentos',
+                            'url'  => '/departamento',
+                        ],
+                        
+                       
+                    ],
+                ],
+
+                [
+                    'text'    => 'Proveedores',
+                    'url'     => '/proveedores',
+                    'icon_color' => 'blue',
+                ],
+                
+            ],
+            
+        ],
+
+        ['header' => 'Cuenta'],
+        
+
+        [
+            'text' => 'Perfil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
 
 
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar contraseña',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text'    => 'Menú',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Proveedores',
-                    'url'  => '/proveedores',
-                ],
+        
 
-                [
-                    'text' => 'Tipo de mascotas',
-                    'url'  => '/tipomascota',
-                ],
-
-                [
-                    'text' => 'Departamentos',
-                    'url'  => '/departamento',
-                ],
-
-                [
-                    'text' => 'Especialidades',
-                    'url'  => '/especialidades',
-                ],
-
-                [
-                    'text' => 'Empleados',
-                    'url'  => '/empleado',
-                ],
-
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                
-            ],
-        ],
+        
         ['header' => 'Otras opciones'],
         [
             'text'       => 'Cerrar Sesión',
@@ -404,6 +458,11 @@ return [
             'text'       => 'No tocar',
             'icon_color' => 'yellow',
             'url'        => 'https://www.youtube.com/watch?v=VHNvnvarFOY',
+        ],
+        [
+            'text'       => 'No darle click',
+            'icon_color' => 'yellow',
+            'url'        => 'https://www.youtube.com/watch?v=6y3INdo2Gnw',
         ],
         [
             'text'       => 'information',

@@ -20,7 +20,7 @@
 </div>
 
 <div class="mb-3">
- <label for="id_genero" class="form-label">Género mascota</label>
+ <label for="id_genero" class="form-label">Género de la mascota</label>
    <div>
       <input type="radio" id="masculino" name="id_generomas" value="masculino">
         <label for="masculino">Macho</label>
@@ -34,17 +34,18 @@
 
 
 
-  </select>
-</div>
-<div>
  <div class="mb-3">
- <label for="cli" class="form-label">cliente</label>
+ <label for="cli" class="form-label">Cliente</label>
                 
 <select class="form-control" id="cli" name="cli">
-  <option value="">Seleccione cliente</option>
+  <option value="">Seleccione el cliente</option>
   @foreach ($cli as $item)
  <option value="{{ $item->id}}">{{ $item->nombre}}</option>
   @endforeach
+  
+</div>
+<div>
+  
  </select>
 
 
@@ -55,10 +56,10 @@
 
 
 <div class="mb-3">
-<label for="tipo" class="form-label">seleccione un tipo</label>
+<label for="tipo" class="form-label">Especie</label>
                 
  <select class="form-control" id="tipo" name="tipo">
- <option value="">Seleccione un tipo</option>
+ <option value="">Seleccione el tipo de especie</option>
     @foreach ($ti as $item)
   <option value="{{ $item->id }}">{{ $item->tipo_mascota }}</option>
   @endforeach
@@ -66,7 +67,7 @@
 </div>
 
 <div class="mb-3">
-<label for="espe" class="form-label">seleccione la especialidad</label>
+<label for="espe" class="form-label">Especialidad del veterinario</label>
                 
  <select class="form-control" id="espe" name="espe">
  <option value="">Seleccione una especialidad</option>

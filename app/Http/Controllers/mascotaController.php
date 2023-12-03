@@ -17,7 +17,7 @@ class mascotaController extends Controller
     public function index()
     {
         $datosmascota=DB::table('mascotas')
-        ->join('tipo_mascotas', 'mascotas.id_tipo', '=', 'tipo_mascotas.id')
+        ->join('tipo_mascotas', 'mascotas.tipomas', '=', 'tipo_mascotas.id')
         ->select('mascotas.*', 'tipo_mascotas.tipo_mascota as tipo_mascotas_nombre')
         ->get();
         
@@ -47,7 +47,7 @@ class mascotaController extends Controller
         $mascota=new mascota(); //Agente es la que dice el modelo 
         $mascota->nombre_mascota=$request->get('nombre_mascota');
         $mascota->id_especialidad=$request->get('espe');
-        $mascota->id_tipo=$request->get('tipo');
+        $mascota->tipomas=$request->get('tipo');
         $mascota->id_generomas=$request->get('id_generomas');
         $mascota->fecha_nac=$request->get('fecha_nac');
         $mascota->id_cli=$request->get('cli');
@@ -91,7 +91,7 @@ class mascotaController extends Controller
         $mascota->fecha_nac=$request->get('fecha_nac');
         $mascota->id_generomas=$request->get('id_generomas');
         $mascota->id_cli=$request->get('cli');
-        $mascota->id_tipo=$request->get('tipo');
+        $mascota->tipomas=$request->get('tipo');
 
         $mascota-> save();
         return redirect('mascota');

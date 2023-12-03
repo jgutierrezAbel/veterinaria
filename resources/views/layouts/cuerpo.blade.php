@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Veterinaria')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+<h1><i class="fas fa-paw"></i> JJR</h1>
 @stop
 
 @section('content')

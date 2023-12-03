@@ -1,81 +1,48 @@
 @extends('layouts.cuerpo')
 
 @section('hijos')
+    
+<div style="display: flex; justify-content: space-between;">
+        <a href="mascota/create" class="btn btn-success">Crear</a>
+        <a href="/tipomascota" class="btn btn-info">Especies</a>
+    </div>
 
+    <h1 class="text-center mt-3">Lista de Mascotas</h1>
 
-
-<a href="mascota/create"class="btn btn-success">Crear</a>
-<table class="table table-striped table-hover">
-<h1>Lista de Mascotas</h1>
-
-    <table class ="table">
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>id</th>
-                <th>nombre</th>
-                <th>id_especialidad</th>
-                <th>tipo</th>
-                <th>fecha de naciemiento</th>
-                <th>Id_Cliente</th>
-                <th>tipo</th>
-
-                
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>ID de la especialidad veterinaria</th>
+                <th>Fecha de nacimiento</th>
+                <th>ID Cliente</th>
+                <th>Especie</th>
             </tr>
-
-        <tbody>
-        
-        @foreach ($mascota as $mascotas)
-            <tr>
-                <th>{{$mascotas->id}}</th>
-                <th>{{$mascotas->nombre_mascota}}</th>
-                <th>{{$mascotas->id_especialidad}}</th>
-                <th>{{$mascotas->fecha_nac}}</th>
-                <th>{{$mascotas->id_cli}}</th>
-                <th>{{$mascotas->tipo_mascotas_nombre}}</th>
-            
-            <th>
-                <br>
-            </br>
-            <form action="/mascota/{{{$mascotas->id}}}" method="post">
-                    @csrf
-                    @method('DELETE')
-
-                 <a href="/mascota/{{$mascotas->id}}/edit"class="btn btn-primary">Editar</a>
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
-                 </form> 
-                </th>
-                </tr>
-                
-        @endforeach
-        
-        </tbody>
-
-
-
-
         </thead>
-
-
-
-
-
+        <tbody>
+            @foreach ($mascota as $mascotas)
+                <tr>
+                    <td>{{$mascotas->id}}</td>
+                    <td>{{$mascotas->nombre_mascota}}</td>
+                    <td>{{$mascotas->id_especialidad}}</td>
+                    <td>{{$mascotas->fecha_nac}}</td>
+                    <td>{{$mascotas->id_cli}}</td>
+                    <td>{{$mascotas->tipo_mascotas_nombre}}</td>
+                    <td>
+                        <form action="/mascota/{{{$mascotas->id}}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <a href="/mascota/{{$mascotas->id}}/edit" class="btn btn-primary">Editar</a>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 @endsection

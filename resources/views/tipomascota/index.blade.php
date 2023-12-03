@@ -3,17 +3,20 @@
 @section('hijos')
 
 
-
+<div style="display: flex; justify-content: space-between;">
 <a href="tipomascota/create"class="btn btn-success">Crear</a>
+</div>
+
+
 <table class="table table-striped table-hover">
-<h1>Lista de tipos de Mascotas</h1>
+<h1 class="text-center mt-3">Lista de tipos de Mascotas</h1>
 
     <table class ="table">
         <thead>
             <tr>
-                <th>id</th>
-                <th>Tip mascotas</th>
-                <th>descripcion</th>
+                <th>ID</th>
+                <th>Epecie de las mascotas</th>
+                <th>Descripción</th>
             </tr>
 
         <tbody>
@@ -58,7 +61,9 @@
 
     </table>
 
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/mascota" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 
 

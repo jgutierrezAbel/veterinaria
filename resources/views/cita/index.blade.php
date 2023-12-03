@@ -2,21 +2,31 @@
 
 @section('hijos')
 
-
-
+<div style="display: flex; justify-content: space-between;">
 <a href="cita/create"class="btn btn-success">Crear</a>
+    <div>
+        <a href="/cliente" class="btn btn-info">Clientes</a>
+        <a href="/veterinario" class="btn btn-info">Veterinarios</a>
+        <a href="/mascota" class="btn btn-info">Mascotas</a>
+        <a href="/tratamiento"class="btn btn-info">Tratamientos</a>
+    </div>
+</div>
+
+
+
 <table class="table table-striped table-hover">
-<h1>Lista de citas</h1>
+
+<h1 class="text-center mt-3">Lista de citas</h1>
 
     <table class ="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>ID</th>
                 <th>Fecha de la cita</th>
                 <th>Hora de la cita</th>
-                <th>Id del cliente</th>
-                <th>Id del Veterinario</th>
-                <th>Id de la mascota</th>
+                <th>ID del cliente</th>
+                <th>ID del Veterinario</th>
+                <th>ID de la mascota</th>
                 <th>Descripción</th>
             </tr>
 
@@ -58,21 +68,9 @@
 
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 
 @endsection

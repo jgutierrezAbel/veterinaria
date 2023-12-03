@@ -1,10 +1,16 @@
 @extends('layouts.cuerpo')
 
 @section('hijos')
-    <a href="veterinario/create" class="btn btn-success">Crear</a>
-    <h1>Lista de veterinarios</h1>
+   
+<div style="display: flex; justify-content: space-between;">
+<a href="veterinario/create" class="btn btn-success">Crear</a>
 
-    <table class="table table-striped table-hover">
+        <a href="/especialidades" class="btn btn-info">Especialidades veterinarias</a>
+    </div>
+
+    
+    <h1 class="text-center mt-3">Lista de veterinarios</h1>
+        <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>ID</th>
@@ -39,4 +45,9 @@
             @endforeach
         </tbody>
     </table>
+
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
+
 @endsection

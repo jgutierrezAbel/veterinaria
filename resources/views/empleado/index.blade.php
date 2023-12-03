@@ -4,19 +4,22 @@
 
 
 
-<a href="empleado/create"class="btn btn-success">Crear</a>
-<table class="table table-striped table-hover">
-<h1>Lista de empleados</h1>
+<div style="display: flex; justify-content: space-between;">
+    <a href="empleado/create" class="btn btn-success">Crear</a>
+    <a href="/departamento" class="btn btn-info">Departamentos</a>
+</div>
 
+<table class="table table-striped table-hover">
+<h1 class="text-center mt-3">Lista de empleados</h1>
     <table class ="table">
         <thead>
             <tr>
-                <th>id</th>
-                <th>nombre</th>
-                <th>apellido</th>
-                <th>fecha de naciemiento</th>
-                <th>género</th>
-                <th>Departamento al que pertenece</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de naciemiento</th>
+                <th>Género</th>
+                <th>Departamento</th>
                 
             </tr>
 
@@ -37,7 +40,7 @@
                     @method('DELETE')
 
                  <a href="/empleado/{{$emplea->id}}/edit"class="btn btn-primary">Editar</a>
-                 <button type="submit" class = "btn btn-primary">Eliminar </button>
+                 <button type="submit" class = "btn btn-primary">Eliminar</button>
                  </form> 
                 </th>
                 </tr>
@@ -57,21 +60,8 @@
 
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 @endsection

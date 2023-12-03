@@ -6,14 +6,14 @@
 
 <a href="proveedores/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Veterinarios</h1>
+<h1 class="text-center mt-3">Lista de proveedores</h1>
 
-    <table class ="table">
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>id</th>
-                <th>nombre</th>
-                <th>descripcion</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
             </tr>
 
         <tbody>
@@ -54,19 +54,10 @@
 
 
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/portada" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 
 

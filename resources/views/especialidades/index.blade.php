@@ -6,9 +6,9 @@
 
 <a href="especialidades/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de especialidades</h1>
+<h1 class="text-center mt-3">Lista de especialidades</h1>
 
-    <table class ="table">
+    <table  class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>id</th>
@@ -56,21 +56,8 @@
 
     </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/veterinario" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 @endsection

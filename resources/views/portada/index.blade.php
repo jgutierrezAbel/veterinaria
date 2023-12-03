@@ -2,61 +2,52 @@
 
 @section('hijos')
 
-<h1>Bienvenido a Veterinaria JJR</h1>
+<h1 class="text-center mt-3">Bienvenido a Veterinaria JJR</h1>
 
+<div class="text-center mt-4">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <a href="/cita" class="btn btn-danger btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-calendar-alt fa-2x mb-2"></i>
+                <span>Citas</span>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="/cliente" class="btn btn-warning btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-users fa-2x mb-2"></i>
+                <span>Clientes</span>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="/veterinario" class="btn btn-success btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-user-md fa-2x mb-2"></i>
+                <span>Veterinarios</span>
+            </a>
+        </div>
+    </div>
 
-<h2>-----------------------------</h2>
+    <p>
 
-<h2>Este es nuestro menu</h2>
-@csrf
-@method('DELETE')
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <a href="/mascota" class="btn btn-success btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-paw fa-2x mb-2"></i>
+                <span>Mascotas</span>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="/empleado" class="btn btn-primary btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-user-tie fa-2x mb-2"></i>
+                <span>Empleados</span>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="/proveedores" class="btn btn-danger btn-lg btn-square d-flex flex-column align-items-center">
+                <i class="fas fa-truck fa-2x mb-2"></i>
+                <span>Proveedores</span>
+            </a>
+        </div>
+    </div>
+</div>
 
-<a href="/proveedores"class="btn btn-success"> Proveedores </a>
-<a href="/tipomascota"class="btn btn-warning">Tipos de mascotas </a>
-<a href="/departamento"class="btn btn-warning">Departamentos </a>
-<a href="/especialidades"class="btn btn-warning">Especialidades de los veterinarios </a>
-<a href="/empleado"class="btn btn-warning">Ver empleado</a>
-<a href="/mascota"class="btn btn-warning">Ver Mascotas</a>
-<a href="/nacionalidad"class="btn btn-warning">Nacionalidad</a>.
-<a href="/cliente"class="btn btn-warning">ver cliente</a>
-<a href="/tratamiento"class="btn btn-warning">Tratamientos</a>
-<a href="/cita"class="btn btn-warning">Citas</a>
-<a href="/veterinario"class="btn btn-warning">veterinarios</a>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
