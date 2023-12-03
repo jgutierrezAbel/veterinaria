@@ -20,25 +20,59 @@
     <input type="text" class="form-control" id="horacita" name="horacita" pattern="\d{2}:\d{2}" title="Por favor ingrese una hora en formato HH:MM">
 </div>
 
-<div class="mb-3">
-  <label for="" class="form-label">Id del cliente</label>
-  <input type="text" class="form-control" id="id_cli"  name="id_cli">
-</div>
-
-<div class="mb-3">
-  <label for="" class="form-label">Id del veterinario</label>
-  <input type="text" class="form-control" id="id_vet"  name="id_vet">
-</div>
-
-<div class="mb-3">
-  <label for="" class="form-label">Id de la mascota</label>
-  <input type="text" class="form-control" id="id_mas"  name="id_mas">
-</div>
 
 <div class="mb-3">
   <label for="" class="form-label">Descripción</label>
   <input type="text" class="form-control" id="descripcion"  name="descripcion">
 </div>
+
+<div class="mb-3">
+ <label for="cli" class="form-label">Cliente</label>
+                
+<select class="form-control" id="cli" name="cli">
+  <option value="">Seleccione el cliente</option>
+  @foreach ($cli as $item)
+ <option value="{{ $item->id}}">{{ $item->nombre}}</option>
+  @endforeach
+
+
+  
+</div>
+<div>
+  
+ </select>
+
+ <div class="mb-3">
+ <label for="vet" class="form-label">Veterinario</label>
+                
+<select class="form-control" id="vet" name="vet">
+  <option value="">Seleccione el veterinario</option>
+  @foreach ($vet as $item)
+ <option value="{{ $item->id}}">{{ $item->nombre}}</option>
+  @endforeach
+
+  
+  
+</div>
+<div>
+  
+ </select>
+
+ <div class="mb-3">
+ <label for="mas" class="form-label">Veterinario</label>
+                
+<select class="form-control" id="mas" name="mas">
+  <option value="">Seleccione la mascota</option>
+  @foreach ($mas as $item)
+ <option value="{{ $item->id}}">{{ $item->nombre_mascota}}</option>
+  @endforeach
+
+  
+  
+</div>
+<div>
+  
+ </select>
 
 
 <div class="mb-3"> 

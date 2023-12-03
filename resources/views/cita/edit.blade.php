@@ -21,31 +21,62 @@
     <input type="text" class="form-control" id="horacita" value="{{$citaEditar->horacita}}" name="horacita" pattern="\d{2}:\d{2}" title="Por favor ingrese una hora en formato HH:MM">
 </div>
 
-<div class="mb-3">
-  <label for="" class="form-label">Id del cliente</label>
-  <input type="text" class="form-control" id="id_cli" value="{{$citaEditar->id_cli}}" name="id_cli">
-</div>
-
-<div class="mb-3">
-  <label for="" class="form-label">Id del veterinario</label>
-  <input type="text" class="form-control" id="id_vet" value="{{$citaEditar->id_vet}}" name="id_vet">
-</div>
-
-<div class="mb-3">
-  <label for="" class="form-label">Id de la mascota</label>
-  <input type="text" class="form-control" id="id_mas" value="{{$citaEditar->id_mas}}" name="id_mas">
-</div>
 
 <div class="mb-3">
   <label for="" class="form-label">Id de la mascota</label>
   <input type="text" class="form-control" id="descripcion" value="{{$citaEditar->descripcion}}" name="descripcion">
 </div>
 
+
+<div class="mb-3">
+        <label for="cli" class="form-label">cliente</label>
+        <select class="form-control" id="cli" name="cli">
+          @foreach ($cli as $item)
+            <option value="{{ $item->id }}" {{$citaEditar->id_cli == $item->id ? 'selected' : ''}}>
+              {{ $item->nombre }}
+            </option>
+          @endforeach
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="mas" class="form-label">Mascota</label>
+        <select class="form-control" id="mas" name="mas">
+          @foreach ($mas as $item)
+            <option value="{{ $item->id }}" {{$citaEditar->id_mas == $item->id ? 'selected' : ''}}>
+              {{ $item->nombre_mascota }}
+            </option>
+          @endforeach
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="mvet" class="form-label">Veterinario</label>
+        <select class="form-control" id="vet" name="vet">
+          @foreach ($vet as $item)
+            <option value="{{ $item->id }}" {{$citaEditar->id_vet == $item->id ? 'selected' : ''}}>
+              {{ $item->nombre }}
+            </option>
+          @endforeach
+        </select>
+      </div>
+
+
+
+
+
+
+
+
+
 <div class="mb-3"> 
     <button type="submit" class="btn btn-primary">Guardar</button>
     <a href="/cita" class="btn btn-danger">Cancelar</a>
 
 </div>
+
+
 
 <script>
         const inputFecha = document.getElementById('fechacita');

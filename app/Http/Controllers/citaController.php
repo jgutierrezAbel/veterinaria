@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\cliente;
 use App\Models\cita;
+use App\Models\mascota;
+use App\Models\veterinario;
 use Illuminate\Http\Request;
 
 class citaController extends Controller
@@ -22,7 +25,10 @@ class citaController extends Controller
     public function create()
     {
         //
-        return view('cita.create');
+        $cli=cliente::all();
+        $vet=veterinario::all();
+        $mas=mascota::all();
+        return view('cita.create')->with('cli',$cli)->with('vet',$vet)->with('mas',$mas);
     }
 
     /**
@@ -34,9 +40,9 @@ class citaController extends Controller
         $cita=new cita(); //Agente es la que dice el modelo 
         $cita->fechacita=$request->get('fechacita');
         $cita->horacita=$request->get('horacita');
-        $cita->id_cli=$request->get('id_cli');
-        $cita->id_vet=$request->get('id_vet');
-        $cita->id_mas=$request->get('id_mas');
+        $cita->id_cli=$request->get('cli');
+        $cita->id_vet=$request->get('vet');
+        $cita->id_mas=$request->get('mas');
         $cita->descripcion=$request->get('descripcion');
         $cita-> save();
         return redirect('cita');
@@ -60,7 +66,10 @@ class citaController extends Controller
     {
         //
         $citaEditar= cita::find($id);
-        return view('cita.edit')->with('citaEditar',$citaEditar);
+        $cli=cliente::all();
+        $vet=veterinario::all();
+        $mas=mascota::all();
+        return view('cita.edit')->with('citaEditar',$citaEditar)->with('cli',$cli)->with('vet',$vet)->with('mas',$mas);
     }
 
     /**
@@ -72,9 +81,9 @@ class citaController extends Controller
         $cita=cita::find($id);
         $cita->fechacita=$request->get('fechacita');
         $cita->horacita=$request->get('horacita');
-        $cita->id_cli=$request->get('id_cli');
-        $cita->id_vet=$request->get('id_vet');
-        $cita->id_mas=$request->get('id_mas');
+        $cita->id_cli=$request->get('cli');
+        $cita->id_vet=$request->get('vet');
+        $cita->id_mas=$request->get('mas');
         $cita->descripcion=$request->get('descripcion');
         $cita-> save();
         return redirect('cita');
