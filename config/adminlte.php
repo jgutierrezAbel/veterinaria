@@ -477,11 +477,6 @@ return [
             'url'        => 'https://www.youtube.com/watch?v=VHNvnvarFOY',
         ],
         [
-            'text'       => 'No darle click',
-            'icon_color' => 'yellow',
-            'url'        => 'https://www.youtube.com/watch?v=6y3INdo2Gnw',
-        ],
-        [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',

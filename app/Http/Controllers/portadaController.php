@@ -45,6 +45,7 @@ class portadaController extends Controller
     {
         return view('portada.about');
     }
+    
 
     /**
      * Show the form for editing the specified resource.

@@ -3,8 +3,11 @@
 @section('hijos')
 
 
-
+<div style="display: flex; justify-content: space-between;">
 <a href="medicamento/create"class="btn btn-success">Crear</a>
+        <a href="/proveedores" class="btn btn-info">Proveedores</a>
+    </div>
+
 <table class="table table-striped table-hover">
 <h1 class="text-center mt-3">Lista de medicamentos</h1>
 
