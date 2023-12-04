@@ -3,18 +3,23 @@
 @section('hijos')
 
 
+<div style="display: flex; justify-content: space-between;">
+        <a href="tratamiento/create" class="btn btn-success">Crear</a>
+        <a href="/medicamento" class="btn btn-info">Medicamentos</a>
+    </div>
 
-<a href="tratamiento/create"class="btn btn-success">Crear</a>
 <table class="table table-striped table-hover">
-<h1>Lista de tratamientos</h1>
+<h1 class="text-center mt-3">Lista de tratamientos</h1>
+
 
     <table class ="table">
         <thead>
             <tr>
-                <th>id</th>
-                <th>nombre</th>
-                <th>descripción</th>
-                <th>Id_Cita</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>ID de la cita</th>
+                <th>Medicamentos</th>
                 
             </tr>
 
@@ -26,6 +31,7 @@
                 <th>{{$tratamientos->nombretratamiento}}</th>
                 <th>{{$tratamientos->descripcion}}</th>
                 <th>{{$tratamientos->id_cita}}</th>
+                <th>{{$tratamientos->medicamento}}</th>
             
             <th>
             <form action="/tratamiento/{{{$tratamientos->id}}}" method="post">
@@ -54,6 +60,9 @@
     </table>
 
 
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/cita" class="btn btn-danger btn-lg">Volver</a>
+    </div>
 
 
 

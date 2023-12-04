@@ -339,7 +339,11 @@ return [
                             'url'  => '/cita',
                         ],
                         
-                       
+                        [
+                            'text' => 'Tratamientos',
+                            'url'  => '/tratamiento',
+                        ],
+
                     ],
                 ],
 
@@ -424,6 +428,19 @@ return [
                     'text'    => 'Proveedores',
                     'url'     => '/proveedores',
                     'icon_color' => 'blue',
+                    'submenu' => [
+                        [
+                            'text' => 'Nuestros proveedores',
+                            'url'  => '/proveedores',
+                        ],
+
+                        [
+                            'text' => 'Medicamentos',
+                            'url'  => '/medicamento',
+                        ],
+                        
+                       
+                    ],
                 ],
                 
             ],

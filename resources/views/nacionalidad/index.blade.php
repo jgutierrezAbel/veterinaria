@@ -11,7 +11,7 @@
     <table  class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>id</th>
+                <th>ID</th>
                 <th>Nacionalidad</th>               
             </tr>
 
@@ -28,7 +28,7 @@
                     @csrf
                     @method('DELETE')
                  <a href="/nacionalidad/{{$nacionalidades->id}}/edit"class="btn btn-primary">Editar</a>
-                 <a href="/nacionalidad/{{$nacionalidades->id}}/"class="btn btn-danger">Elimar</a>
+                 <a href="/nacionalidad/{{$nacionalidades->id}}/"class="btn btn-danger">Eliminar</a>
                  </form> 
                 </th>
                 </tr>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tratamiento;
+use App\Models\medicamento;
+use App\Models\cita;
 
 class tratamientoController extends Controller
 {
@@ -22,23 +24,26 @@ class tratamientoController extends Controller
      */
     public function create()
     {
-        //
-        return view('tratamiento.create');
+        $cita=cita::all();
+        $med=medicamento::all();
+        return view('tratamiento.create')->with('cita',$cita)->with('med',$med);
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-        $tratamiento=new tratamiento(); //Agente es la que dice el modelo 
-        $tratamiento->nombretratamiento=$request->get('nombretratamiento');
-        $tratamiento->descripcion=$request->get('descripcion');
-        $tratamiento->id_cita=$request->get('id_cita');
-        $tratamiento-> save();
-        return redirect('tratamiento');
-    }
+{
+    $tratamiento = new tratamiento();
+    $tratamiento->nombretratamiento = $request->input('nombretratamiento');
+    $tratamiento->descripcion = $request->input('descripcion');
+    $tratamiento->id_cita = $request->input('cita');
+    $tratamiento->medicamento = $request->input('med');
+    $tratamiento->save();
+
+    return redirect('tratamiento');
+}
+
 
     /**
      * Display the specified resource.
@@ -58,7 +63,9 @@ class tratamientoController extends Controller
     {
         //
         $tratamientoEditar= tratamiento::find($id);
-        return view('tratamiento.edit')->with('tratamientoEditar',$tratamientoEditar);
+        $cita=cita::all();
+        $med=medicamento::all();
+        return view('tratamiento.edit')->with('tratamientoEditar',$tratamientoEditar)->with('cita',$cita)->with('med',$med);
     }
 
     /**
@@ -70,7 +77,8 @@ class tratamientoController extends Controller
         $tratamiento=tratamiento::find($id);
         $tratamiento->nombretratamiento=$request->get('nombretratamiento');
         $tratamiento->descripcion=$request->get('descripcion');
-        $tratamiento->id_cita=$request->get('id_cita');
+        $tratamiento->id_cita=$request->get('cita');
+        $tratamiento->medicamento=$request->get('med');
         $tratamiento -> save();
        return redirect('tratamiento');
     }

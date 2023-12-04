@@ -35,9 +35,8 @@
  <option value="{{ $item->id}}">{{ $item->nombre}}</option>
   @endforeach
 
-
-  
 </div>
+
 <div>
   
  </select>
@@ -59,7 +58,7 @@
  </select>
 
  <div class="mb-3">
- <label for="mas" class="form-label">Veterinario</label>
+ <label for="mas" class="form-label">Mascota</label>
                 
 <select class="form-control" id="mas" name="mas">
   <option value="">Seleccione la mascota</option>

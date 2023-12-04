@@ -26,6 +26,11 @@
   <input type="text" class="form-control" id="id_cita" value="{{$tratamientoEliminar->id_cita}}" name="id_cita">
 </div>
 
+<div class="mb-3">
+  <label for="" class="form-label">Medicamento</label>
+  <input type="text" class="form-control" id="medicamento" value="{{$tratamientoEliminar->medicamento}}" name="medicamento">
+</div>
+
 <div class="mb-3"> 
     <button type="submit" class="btn btn-danger">Eliminar</button>
     <a href="/tratamiento" class="btn btn-warning">Cancelar</a>

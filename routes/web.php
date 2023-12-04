@@ -47,7 +47,7 @@ route::resource('/cliente','App\Http\Controllers\clienteController');
 route::resource('/tratamiento','App\Http\Controllers\tratamientoController');
 route::resource('/cita','App\Http\Controllers\citaController');
 route::resource('/veterinario','App\Http\Controllers\veterinarioController');
-
+route::resource('/medicamento','App\Http\Controllers\medicamentoController');
 
 Route::get('/', function () {
     return view('welcome');
