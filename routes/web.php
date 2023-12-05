@@ -1,14 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
-/*
-use app\Http\Controllers\loginControler;
-*/
-
-
-
+use app\Http\Controllers\loginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,18 +13,6 @@ use app\Http\Controllers\loginControler;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
-
-/*
-route::view('/login',"login")->name('login');
-route::view('/registro',"register")->name('registro');
-route::view('/privada',"secret")->middleware('auth')->name('privada');
-
-
-
-route::post('/validar-registro',[loginControler::class,'register'])->name('validar-registro');
-route::post('/inicia-sesion',[loginControler::class,'login'])->name('inicia-sesion');
-route::get('/logour',[loginControler::class,'logout'])->name('logout');
 */
 
 route::resource('/departamento','App\Http\Controllers\departamentoController');
@@ -49,6 +31,9 @@ route::resource('/cita','App\Http\Controllers\citaController');
 route::resource('/veterinario','App\Http\Controllers\veterinarioController');
 route::resource('/medicamento','App\Http\Controllers\medicamentoController');
 
+Route::get('/registro', [UserController::class, 'showRegistrationForm']);
+Route::post('/registro', [UserController::class, 'register']);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -62,3 +47,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
