@@ -36,7 +36,6 @@
       text-align: center;
     }
 
-    /* Estilos personalizados para los botones */
     .custom-btn {
       color: #fff;
       background-color: #ff5a5f;
@@ -85,11 +84,10 @@
   </main>
 
   <footer>
-    <p>Contáctanos para programar una cita: <a href="/portada">123-456-789</a></p>
+    <p>Contáctanos para programar una cita: <a>123-456-789</a></p>
     <p>Dirección: 123 Calle Principal, Ciudad</p>
   </footer>
 
-  <!-- Scripts de Bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

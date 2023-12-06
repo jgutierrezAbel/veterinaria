@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\loginController;
 use App\Http\Controllers\UserController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,8 +33,16 @@ route::resource('/cita','App\Http\Controllers\citaController');
 route::resource('/veterinario','App\Http\Controllers\veterinarioController');
 route::resource('/medicamento','App\Http\Controllers\medicamentoController');
 
-Route::get('/registro', [UserController::class, 'showRegistrationForm']);
-Route::post('/registro', [UserController::class, 'register']);
+// Rutas para el registro de usuarios
+Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [UserController::class, 'register']);
+
+// Rutas para el inicio de sesión
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [UserController::class, 'login']);
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -48,6 +58,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -447,40 +447,11 @@ return [
             
         ],
 
-        ['header' => 'Cuenta'],
-        
-
-        [
-            'text' => 'Perfil',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-
-
-        [
-            'text' => 'Cambiar contraseña',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+    
         
 
         
-        ['header' => 'Otras opciones'],
-        [
-            'text'       => 'Cerrar Sesión',
-            'icon_color' => 'red',
-            'url'        => '/',
-        ],
-        [
-            'text'       => 'No tocar',
-            'icon_color' => 'yellow',
-            'url'        => 'https://www.youtube.com/watch?v=VHNvnvarFOY',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+    
     ],
 
     /*
