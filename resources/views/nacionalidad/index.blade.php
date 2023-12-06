@@ -49,7 +49,7 @@
     </table>
 
     <div class="text-center" style="margin-top: 20px;">
-        <a href="/empleado" class="btn btn-danger btn-lg">Volver</a>
+        <a href="/cliente" class="btn btn-danger btn-lg">Volver</a>
     </div>
 
 
