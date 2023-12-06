@@ -42,7 +42,7 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        // Autenticar al usuario
+        
         if (Auth::attempt($credentials)) {
             return redirect('/portada');
         } else {
