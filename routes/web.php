@@ -32,14 +32,10 @@ route::resource('/tratamiento','App\Http\Controllers\tratamientoController');
 route::resource('/cita','App\Http\Controllers\citaController');
 route::resource('/veterinario','App\Http\Controllers\veterinarioController');
 route::resource('/medicamento','App\Http\Controllers\medicamentoController');
-
-// Rutas para el registro de usuarios
-Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [UserController::class, 'register']);
-
-// Rutas para el inicio de sesión
-Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [UserController::class, 'login']);
+route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register');
+route::post('/register', [UserController::class, 'register']);
+route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
+route::post('/login', [UserController::class, 'login']);
 
 
 

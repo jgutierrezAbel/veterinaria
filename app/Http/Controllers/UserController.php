@@ -15,16 +15,16 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        $request->validate([
-            'usuario' => 'required|string|max:255',
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
         ]);
-
-        User::create([
-            'name' => $request->input('usuario'),
-            'email' => $request->input('email'),
-            'password' => bcrypt($request->input('password')),
+        
+        $user = User::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => bcrypt($validatedData['password']),
         ]);
         
         return redirect('/register')->with('success', 'Se ha registrado correctamente');
@@ -42,6 +42,7 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
+        // Autenticar al usuario
         if (Auth::attempt($credentials)) {
             return redirect('/portada');
         } else {
