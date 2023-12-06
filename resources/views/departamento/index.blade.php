@@ -3,7 +3,7 @@
 @section('hijos')
     <div>
         <a href="departamento/create" class="btn btn-success">Crear</a>
-        <h1>Lista de departamentos</h1>
+        <h1 class="text-center mt-3">Lista de departamentos</h1>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -28,5 +28,8 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="/cliente" class="btn btn-danger btn-lg">Volver</a>
     </div>
 @endsection

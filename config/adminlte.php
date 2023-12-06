@@ -398,7 +398,7 @@ return [
 
                         [
                             'text' => 'Especies de mascotas',
-                            'url'  => '/tipomascotas',
+                            'url'  => '/tipomascota',
                         ],
                         
                        
