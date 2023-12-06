@@ -26,7 +26,7 @@
                             <input type="text" class="form-control" name="usuario" placeholder="Usuario" value="{{ old('usuario') }}" required/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="correo" placeholder="Correo" value="{{ old('correo') }}" required/>
+                            <input type="text" class="form-control" name="email" placeholder="Correo" value="{{ old('email') }}" required/>
                         </div>
                     </div>
                     <div class="col-md-6">

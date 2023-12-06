@@ -14,19 +14,26 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+       // print_r("estoy en register");
+       // exit();
+        
         // Validación básica, puedes mejorar esto según tus necesidades
         $request->validate([
             'usuario' => 'required|string|max:255',
-            'correo' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
+        
 
         // Crear un nuevo usuario
+        
+
         User::create([
             'name' => $request->input('usuario'),
-            'email' => $request->input('correo'),
+            'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
         ]);
+        
 
         // Puedes agregar un mensaje de éxito aquí
         return redirect('/registro')->with('success', 'Usuario registrado exitosamente.');
